@@ -1,0 +1,27 @@
+{
+  "name": "playwright_demo_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test --headed",
+    "test:chrome": "npx playwright test",
+    "test:headless": "playwright test --headless",
+    "test:debug": "playwright test --headed --debug",
+    "test:report": "playwright show-report",
+    "test:sharded": "playwright test --shard=1/2",
+    "mcp": "playwright-mcp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/mcp": "^0.0.35",
+    "@playwright/test": "^1.53.0",
+    "@types/node": "^24.0.0"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^12.1.0",
+    "fs": "^0.0.1-security"
+  }
+}

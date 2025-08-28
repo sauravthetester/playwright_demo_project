@@ -1,0 +1,338 @@
+2025-06-12 01:31:19,287 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2025-06-12 01:31:19,324 INFO o.a.j.JMeter: Loading user properties from: /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/user.properties
+2025-06-12 01:31:19,325 INFO o.a.j.JMeter: Loading system properties from: /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/system.properties
+2025-06-12 01:31:19,328 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2025-06-12 01:31:19,328 INFO o.a.j.JMeter: Version 5.6.3
+2025-06-12 01:31:19,328 INFO o.a.j.JMeter: java.version=21.0.2
+2025-06-12 01:31:19,328 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2025-06-12 01:31:19,328 INFO o.a.j.JMeter: os.name=Mac OS X
+2025-06-12 01:31:19,328 INFO o.a.j.JMeter: os.arch=aarch64
+2025-06-12 01:31:19,328 INFO o.a.j.JMeter: os.version=14.6.1
+2025-06-12 01:31:19,328 INFO o.a.j.JMeter: file.encoding=UTF-8
+2025-06-12 01:31:19,329 INFO o.a.j.JMeter: java.awt.headless=null
+2025-06-12 01:31:19,329 INFO o.a.j.JMeter: Max memory     =1073741824
+2025-06-12 01:31:19,329 INFO o.a.j.JMeter: Available Processors =8
+2025-06-12 01:31:19,337 INFO o.a.j.JMeter: Default Locale=English (EN)
+2025-06-12 01:31:19,337 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2025-06-12 01:31:19,337 INFO o.a.j.JMeter: JMeterHome=/Users/bidyashreepaul/jmeter/5.6.3/libexec
+2025-06-12 01:31:19,337 INFO o.a.j.JMeter: user.dir  =/Users/bidyashreepaul/Documents/GitHub/playwright_demo_project
+2025-06-12 01:31:19,337 INFO o.a.j.JMeter: PWD       =/Users/bidyashreepaul/Documents/GitHub/playwright_demo_project
+2025-06-12 01:31:19,338 INFO o.a.j.JMeter: IP: 192.168.29.182 Name: Bidyashrees-MacBook-Pro.local FullName: 192.168.29.182
+2025-06-12 01:31:19,347 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2025-06-12 01:31:20,229 INFO o.a.j.JMeterGuiLauncher: Setting LAF to: laf:javax.swing.plaf.metal.MetalLookAndFeel
+2025-06-12 01:31:21,802 INFO o.a.j.r.ClassFinder: Will scan jar /Users/bidyashreepaul/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-06-12 01:31:21,897 INFO o.a.j.r.ClassFinder: Will scan jar /Users/bidyashreepaul/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-06-12 01:31:21,962 INFO o.j.r.JARSourceHTTP: Requesting https://jmeter-plugins.org/repo/?installID=mac_os_x-00a59129a730e5e056efa040fc0dfe62-gui
+2025-06-12 01:31:24,498 INFO o.j.r.PluginManager: Plugins Status: [jpgc-plugins-manager=1.9, jmeter-core=5.6.3, jmeter-ftp=5.6.3, jmeter-http=5.6.3, jmeter-jdbc=5.6.3, jmeter-jms=5.6.3, jmeter-junit=5.6.3, jmeter-java=5.6.3, jmeter-ldap=5.6.3, jmeter-mail=5.6.3, jmeter-mongodb=5.6.3, jmeter-native=5.6.3, jmeter-tcp=5.6.3, jmeter-components=5.6.3]
+2025-06-12 01:31:24,499 INFO o.j.r.PluginManagerMenuItem: Plugins Manager has upgrades: [jpgc-plugins-manager]
+2025-06-12 01:31:30,169 INFO o.a.j.s.FileServer: Default base='/Users/bidyashreepaul/Documents/GitHub/playwright_demo_project'
+2025-06-12 01:31:30,171 INFO o.a.j.g.a.Load: Loading file: /Users/bidyashreepaul/Documents/jmeter/demojmeter.jmx
+2025-06-12 01:31:30,172 INFO o.a.j.s.FileServer: Set new base='/Users/bidyashreepaul/Documents/jmeter'
+2025-06-12 01:31:30,293 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2025-06-12 01:31:30,298 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2025-06-12 01:31:30,299 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2025-06-12 01:31:30,300 INFO o.a.j.s.SaveService: Loading file: /Users/bidyashreepaul/Documents/jmeter/demojmeter.jmx
+2025-06-12 01:31:30,355 INFO o.a.j.p.h.c.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_
+2025-06-12 01:31:30,501 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
+2025-06-12 01:31:30,501 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:31:30,540 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-06-12 01:31:30,541 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-06-12 01:31:30,541 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-06-12 01:31:30,541 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-06-12 01:31:30,541 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2025-06-12 01:31:30,541 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2025-06-12 01:31:30,602 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2025-06-12 01:31:30,602 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2025-06-12 01:31:30,602 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2025-06-12 01:31:30,602 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2025-06-12 01:31:30,671 INFO o.a.j.r.ClassFinder: Will scan jar /Users/bidyashreepaul/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.ResultRenderer], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-06-12 01:31:30,682 INFO o.a.j.r.ClassFinder: Will scan jar /Users/bidyashreepaul/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.RequestView], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-06-12 01:31:30,741 INFO o.a.j.r.ClassFinder: Will scan jar /Users/bidyashreepaul/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.ResultRenderer], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-06-12 01:31:30,748 INFO o.a.j.r.ClassFinder: Will scan jar /Users/bidyashreepaul/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.RequestView], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-06-12 01:31:30,762 INFO o.a.j.s.FileServer: Set new base='/Users/bidyashreepaul/Documents/jmeter'
+2025-06-12 01:31:33,419 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2025-06-12 01:31:33,419 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2025-06-12 01:31:33,454 INFO o.a.j.r.ClassFinder: Will scan jar /Users/bidyashreepaul/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-06-12 01:31:33,538 WARN o.a.j.p.h.p.ProxyControl: Could not read key store keystore password was incorrect; cause: failed to decrypt safe contents entry: javax.crypto.BadPaddingException: Given final block not properly padded. Such issues can arise if a bad key is used during decryption., a new one will be created, ensure you install it in browser
+java.io.IOException: keystore password was incorrect
+	at java.base/sun.security.pkcs12.PKCS12KeyStore.engineLoad(PKCS12KeyStore.java:2097) ~[?:?]
+	at java.base/sun.security.util.KeyStoreDelegator.engineLoad(KeyStoreDelegator.java:249) ~[?:?]
+	at java.base/java.security.KeyStore.load(KeyStore.java:1500) ~[?:?]
+	at org.apache.jmeter.protocol.http.proxy.ProxyControl.getKeyStore(ProxyControl.java:1701) ~[ApacheJMeter_http.jar:5.6.3]
+	at org.apache.jmeter.protocol.http.proxy.ProxyControl.initDynamicKeyStore(ProxyControl.java:1576) ~[ApacheJMeter_http.jar:5.6.3]
+	at org.apache.jmeter.protocol.http.proxy.ProxyControl.initKeyStore(ProxyControl.java:1529) ~[ApacheJMeter_http.jar:5.6.3]
+	at org.apache.jmeter.protocol.http.proxy.ProxyControl.startProxy(ProxyControl.java:536) ~[ApacheJMeter_http.jar:5.6.3]
+	at org.apache.jmeter.protocol.http.proxy.gui.ProxyControlGui.startProxy(ProxyControlGui.java:630) ~[ApacheJMeter_http.jar:5.6.3]
+	at org.apache.jmeter.protocol.http.proxy.gui.ProxyControlGui.actionPerformed(ProxyControlGui.java:468) ~[ApacheJMeter_http.jar:5.6.3]
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972) ~[?:?]
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314) ~[?:?]
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407) ~[?:?]
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262) ~[?:?]
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279) ~[?:?]
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621) ~[?:?]
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398) ~[?:?]
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386) ~[?:?]
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266) ~[?:?]
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996) ~[?:?]
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324) ~[?:?]
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828) ~[?:?]
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948) ~[?:?]
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575) ~[?:?]
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516) ~[?:?]
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310) ~[?:?]
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780) ~[?:?]
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828) ~[?:?]
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775) ~[?:?]
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720) ~[?:?]
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714) ~[?:?]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400) [?:?]
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87) ~[?:?]
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98) ~[?:?]
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747) ~[?:?]
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745) ~[?:?]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400) [?:?]
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87) [?:?]
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90) [?:?]
+Caused by: java.security.UnrecoverableKeyException: failed to decrypt safe contents entry: javax.crypto.BadPaddingException: Given final block not properly padded. Such issues can arise if a bad key is used during decryption.
+	... 44 more
+2025-06-12 01:31:33,547 INFO o.a.j.p.h.p.ProxyControl: Creating HTTP(S) Test Script Recorder Root CA in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks, ensure you install certificate in your Browser for recording
+2025-06-12 01:31:37,749 WARN o.a.j.e.KeyToolUtils: Failed creating /Users/bidyashreepaul/Documents/GitHub/playwright_demo_project/ApacheJMeterTemporaryRootCA.crt, check 'keytool' utility in path is available and points to a JDK >= 7
+2025-06-12 01:31:37,749 INFO o.a.j.p.h.p.ProxyControl: Created keystore in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:31:37,761 INFO o.a.j.p.h.p.Daemon: Creating Daemon Socket on port: 2021
+2025-06-12 01:31:37,762 INFO o.a.j.p.h.p.Daemon: Test Script Recorder up and running!
+2025-06-12 01:31:56,939 INFO o.a.j.r.ClassFinder: Will scan jar /Users/bidyashreepaul/jmeter/5.6.3/libexec/lib/ext/jmeter-plugins-manager-1.9.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.protocol.http.proxy.SamplerCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-06-12 01:31:56,951 INFO o.a.j.p.h.p.Proxy: Proxy will remove the headers: If-Modified-Since,If-None-Match,Host
+2025-06-12 01:31:56,955 INFO o.a.j.p.h.p.ProxyControl: [62618]  Creating entry content-signature-2.cdn.mozilla.net in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:31:58,104 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = Bidyashrees-MacBook-Pro.local
+2025-06-12 01:31:58,119 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2025-06-12 01:32:02,016 INFO o.a.j.p.h.p.ProxyControl: [62647]  Creating entry firefox-settings-attachments.cdn.mozilla.net in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:32:02,033 INFO o.a.j.p.h.p.Proxy: [62618]  KeyStore for SSL loaded OK and put host 'content-signature-2.cdn.mozilla.net' in map with key (content-signature-2.cdn.mozilla.net)
+2025-06-12 01:32:02,086 WARN o.a.j.p.h.p.Proxy: [62618]  Problem with SSL certificate for url  for 'content-signature-2.cdn.mozilla.net'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2025-06-12 01:32:02,087 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-06-12 01:32:04,417 INFO o.a.j.p.h.p.ProxyControl: [62645]  Creating entry www.google.com in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:32:04,423 INFO o.a.j.p.h.p.Proxy: [62647]  KeyStore for SSL loaded OK and put host 'firefox-settings-attachments.cdn.mozilla.net' in map with key (firefox-settings-attachments.cdn.mozilla.net)
+2025-06-12 01:32:04,494 WARN o.a.j.p.h.p.Proxy: [62647]  Problem with SSL certificate for url  for 'firefox-settings-attachments.cdn.mozilla.net'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:04,494 WARN o.a.j.p.h.p.Proxy: [62646]  Problem with SSL certificate for url  for 'firefox-settings-attachments.cdn.mozilla.net'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:07,427 INFO o.a.j.p.h.p.ProxyControl: [62644]  Creating entry incoming.telemetry.mozilla.org in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:32:07,454 INFO o.a.j.p.h.p.Proxy: [62645]  KeyStore for SSL loaded OK and put host 'www.google.com' in map with key (www.google.com)
+2025-06-12 01:32:07,458 WARN o.a.j.p.h.p.Proxy: [62645]  Problem with SSL certificate for url  for 'www.google.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:09,803 INFO o.a.j.p.h.p.ProxyControl: [62639]  Creating entry firefox.settings.services.mozilla.com in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:32:09,819 INFO o.a.j.p.h.p.Proxy: [62644]  KeyStore for SSL loaded OK and put host 'incoming.telemetry.mozilla.org' in map with key (incoming.telemetry.mozilla.org)
+2025-06-12 01:32:09,849 WARN o.a.j.p.h.p.Proxy: [62644]  Problem with SSL certificate for url  for 'incoming.telemetry.mozilla.org'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:09,851 WARN o.a.j.p.h.p.Proxy: [62670]  Problem with SSL certificate for url  for 'incoming.telemetry.mozilla.org'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:09,853 WARN o.a.j.p.h.p.Proxy: [62672]  Problem with SSL certificate for url  for 'incoming.telemetry.mozilla.org'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:10,064 INFO o.a.j.p.h.p.ProxyControl: Add sample -12 into controller 
+2025-06-12 01:32:12,402 INFO o.a.j.p.h.p.ProxyControl: [62638]  Creating entry aus5.mozilla.org in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:32:12,422 INFO o.a.j.p.h.p.Proxy: [62639]  KeyStore for SSL loaded OK and put host 'firefox.settings.services.mozilla.com' in map with key (firefox.settings.services.mozilla.com)
+2025-06-12 01:32:12,438 WARN o.a.j.p.h.p.Proxy: [62639]  Problem with SSL certificate for url  for 'firefox.settings.services.mozilla.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:12,460 WARN o.a.j.p.h.p.Proxy: [62681]  Problem with SSL certificate for url  for 'incoming.telemetry.mozilla.org'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:12,464 WARN o.a.j.p.h.p.Proxy: [62682]  Problem with SSL certificate for url  for 'incoming.telemetry.mozilla.org'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:12,470 WARN o.a.j.p.h.p.Proxy: [62683]  Problem with SSL certificate for url  for 'incoming.telemetry.mozilla.org'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:15,595 INFO o.a.j.p.h.p.ProxyControl: [62637]  Creating entry push.services.mozilla.com in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:32:15,621 INFO o.a.j.p.h.p.Proxy: [62638]  KeyStore for SSL loaded OK and put host 'aus5.mozilla.org' in map with key (aus5.mozilla.org)
+2025-06-12 01:32:15,634 WARN o.a.j.p.h.p.Proxy: [62638]  Problem with SSL certificate for url  for 'aus5.mozilla.org'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2025-06-12 01:32:18,177 INFO o.a.j.p.h.p.ProxyControl: [62636]  Creating entry safebrowsing.googleapis.com in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:32:18,208 INFO o.a.j.p.h.p.Proxy: [62637]  KeyStore for SSL loaded OK and put host 'push.services.mozilla.com' in map with key (push.services.mozilla.com)
+2025-06-12 01:32:18,224 WARN o.a.j.p.h.p.Proxy: [62637]  Problem with SSL certificate for url  for 'push.services.mozilla.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:21,116 INFO o.a.j.p.h.p.ProxyControl: [62625]  Creating entry merino.services.mozilla.com in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:32:21,116 INFO o.a.j.p.h.p.Proxy: [62636]  KeyStore for SSL loaded OK and put host 'safebrowsing.googleapis.com' in map with key (safebrowsing.googleapis.com)
+2025-06-12 01:32:21,119 WARN o.a.j.p.h.p.Proxy: [62627]  Problem with SSL certificate for url  for 'firefox.settings.services.mozilla.com'? Ensure browser is set to accept the JMeter proxy cert: Connection reset
+2025-06-12 01:32:21,136 WARN o.a.j.p.h.p.Proxy: [62628]  Problem with SSL certificate for url  for 'content-signature-2.cdn.mozilla.net'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2025-06-12 01:32:21,136 WARN o.a.j.p.h.p.Proxy: [62634]  Problem with SSL certificate for url  for 'firefox-settings-attachments.cdn.mozilla.net'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2025-06-12 01:32:21,137 WARN o.a.j.p.h.p.Proxy: [62636]  Problem with SSL certificate for url  for 'safebrowsing.googleapis.com'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2025-06-12 01:32:21,137 WARN o.a.j.p.h.p.Proxy: [62635]  Problem with SSL certificate for url  for 'firefox-settings-attachments.cdn.mozilla.net'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2025-06-12 01:32:21,137 WARN o.a.j.p.h.p.Proxy: [62633]  Problem with SSL certificate for url  for 'firefox-settings-attachments.cdn.mozilla.net'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2025-06-12 01:32:21,153 WARN o.a.j.p.h.p.Proxy: [62703]  Problem with SSL certificate for url  for 'firefox-settings-attachments.cdn.mozilla.net'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:23,249 INFO o.a.j.p.h.p.ProxyControl: [62623]  Creating entry ads.mozilla.org in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:32:23,291 INFO o.a.j.p.h.p.Proxy: [62625]  KeyStore for SSL loaded OK and put host 'merino.services.mozilla.com' in map with key (merino.services.mozilla.com)
+2025-06-12 01:32:23,303 WARN o.a.j.p.h.p.Proxy: [62625]  Problem with SSL certificate for url  for 'merino.services.mozilla.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:23,309 WARN o.a.j.p.h.p.Proxy: [62709]  Problem with SSL certificate for url  for 'push.services.mozilla.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:23,314 WARN o.a.j.p.h.p.Proxy: [62624]  Problem with SSL certificate for url  for 'merino.services.mozilla.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:23,328 WARN o.a.j.p.h.p.Proxy: [62712]  Problem with SSL certificate for url  for 'merino.services.mozilla.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:25,350 INFO o.a.j.p.h.p.ProxyControl: [62677]  Creating entry ww1.demoaut.com in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:32:25,378 INFO o.a.j.p.h.p.Proxy: [62623]  KeyStore for SSL loaded OK and put host 'ads.mozilla.org' in map with key (ads.mozilla.org)
+2025-06-12 01:32:25,388 WARN o.a.j.p.h.p.Proxy: [62617]  Problem with SSL certificate for url  for 'content-signature-2.cdn.mozilla.net'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2025-06-12 01:32:25,390 WARN o.a.j.p.h.p.Proxy: [62678]  Problem with SSL certificate for url  for 'merino.services.mozilla.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:25,391 WARN o.a.j.p.h.p.Proxy: [62623]  Problem with SSL certificate for url  for 'ads.mozilla.org'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:27,550 INFO o.a.j.p.h.p.Proxy: [62677]  KeyStore for SSL loaded OK and put host 'ww1.demoaut.com' in map with key (ww1.demoaut.com)
+2025-06-12 01:32:27,554 WARN o.a.j.p.h.p.Proxy: [62664]  Problem with SSL certificate for url  for 'www.google.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:27,554 WARN o.a.j.p.h.p.Proxy: [62665]  Problem with SSL certificate for url  for 'merino.services.mozilla.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:27,554 WARN o.a.j.p.h.p.Proxy: [62659]  Problem with SSL certificate for url  for 'www.google.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:27,561 WARN o.a.j.p.h.p.Proxy: [62677]  Problem with SSL certificate for url  for 'ww1.demoaut.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:28,392 WARN o.a.j.p.h.p.Proxy: [62732]  Problem with SSL certificate for url  for 'incoming.telemetry.mozilla.org'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:28,415 INFO o.a.j.p.h.p.ProxyControl: Add sample -35 into controller 
+2025-06-12 01:32:28,455 INFO o.a.j.p.h.p.ProxyControl: [62736]  Creating entry parking3.parklogic.com in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:32:28,460 WARN o.a.j.p.h.p.Proxy: [62734]  Problem with SSL certificate for url  for 'incoming.telemetry.mozilla.org'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:28,484 WARN o.a.j.p.h.p.Proxy: [62739]  Problem with SSL certificate for url  for 'incoming.telemetry.mozilla.org'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:29,844 INFO o.a.j.p.h.p.ProxyControl: Add sample -43 into controller 
+2025-06-12 01:32:31,849 INFO o.a.j.p.h.p.ProxyControl: [62750]  Creating entry partner.googleadservices.com in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:32:31,883 INFO o.a.j.p.h.p.Proxy: [62736]  KeyStore for SSL loaded OK and put host 'parking3.parklogic.com' in map with key (parking3.parklogic.com)
+2025-06-12 01:32:31,893 WARN o.a.j.p.h.p.Proxy: [62736]  Problem with SSL certificate for url  for 'parking3.parklogic.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:33,318 WARN o.a.j.p.h.p.Proxy: [62760]  Problem with SSL certificate for url  for 'push.services.mozilla.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:34,163 INFO o.a.j.p.h.p.ProxyControl: [62747]  Creating entry syndicatedsearch.goog in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:32:34,199 INFO o.a.j.p.h.p.Proxy: [62750]  KeyStore for SSL loaded OK and put host 'partner.googleadservices.com' in map with key (partner.googleadservices.com)
+2025-06-12 01:32:34,208 WARN o.a.j.p.h.p.Proxy: [62750]  Problem with SSL certificate for url  for 'partner.googleadservices.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:32:36,592 INFO o.a.j.p.h.p.Proxy: [62747]  KeyStore for SSL loaded OK and put host 'syndicatedsearch.goog' in map with key (syndicatedsearch.goog)
+2025-06-12 01:32:36,610 WARN o.a.j.p.h.p.Proxy: [62746]  Problem with SSL certificate for url  for 'syndicatedsearch.goog'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2025-06-12 01:32:36,610 WARN o.a.j.p.h.p.Proxy: [62747]  Problem with SSL certificate for url  for 'syndicatedsearch.goog'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2025-06-12 01:32:55,432 WARN o.a.j.p.h.p.Proxy: [62785]  Problem with SSL certificate for url  for 'push.services.mozilla.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:33:35,483 WARN o.a.j.p.h.p.Proxy: [62800]  Problem with SSL certificate for url  for 'push.services.mozilla.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:33:39,562 WARN o.a.j.p.h.p.Proxy: [62812]  Problem with SSL certificate for url  for 'www.google.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:33:52,732 WARN o.a.j.p.h.p.Proxy: [62824]  Problem with SSL certificate for url  for 'www.google.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:33:57,382 INFO o.a.j.p.h.p.ProxyControl: [62833]  Creating entry classic.crm.pro in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:34:00,013 INFO o.a.j.p.h.p.ProxyControl: Add sample Launch-69 into controller Launch
+2025-06-12 01:34:00,019 INFO o.a.j.p.h.p.ProxyControl: Add sample Launch-70 into controller Launch
+2025-06-12 01:34:00,494 INFO o.a.j.p.h.p.Proxy: [62833]  KeyStore for SSL loaded OK and put host 'classic.crm.pro' in map with key (classic.crm.pro)
+2025-06-12 01:34:00,497 WARN o.a.j.p.h.p.Proxy: [62833]  Problem with SSL certificate for url  for 'classic.crm.pro'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:34:03,459 INFO o.a.j.p.h.p.ProxyControl: Add sample Launch-72 into controller Launch
+2025-06-12 01:34:03,572 WARN o.a.j.p.h.p.Proxy: [62840]  Problem with SSL certificate for url  for 'parking3.parklogic.com'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2025-06-12 01:34:03,601 WARN o.a.j.p.h.p.Proxy: [62844]  Problem with SSL certificate for url  for 'syndicatedsearch.goog'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:34:03,602 WARN o.a.j.p.h.p.Proxy: [62845]  Problem with SSL certificate for url  for 'syndicatedsearch.goog'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:34:03,702 WARN o.a.j.p.h.p.Proxy: [62851]  Problem with SSL certificate for url  for 'partner.googleadservices.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:34:04,072 INFO o.a.j.p.h.p.ProxyControl: Add sample Launch-74 into controller Launch
+2025-06-12 01:34:05,647 WARN o.a.j.p.h.p.Proxy: [62858]  Problem with SSL certificate for url  for 'www.google.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:34:09,118 WARN o.a.j.p.h.p.Proxy: [62865]  Problem with SSL certificate for url  for 'www.google.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:34:20,745 INFO o.a.j.p.h.p.ProxyControl: Add sample Launch-86 into controller Launch
+2025-06-12 01:34:21,241 WARN o.a.j.p.h.p.Proxy: [62878]  Problem with SSL certificate for url  for 'parking3.parklogic.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:34:21,251 WARN o.a.j.p.h.p.Proxy: [62882]  Problem with SSL certificate for url  for 'syndicatedsearch.goog'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:34:21,254 WARN o.a.j.p.h.p.Proxy: [62883]  Problem with SSL certificate for url  for 'syndicatedsearch.goog'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:34:21,358 INFO o.a.j.p.h.p.ProxyControl: Add sample Launch-87 into controller Launch
+2025-06-12 01:34:21,358 WARN o.a.j.p.h.p.Proxy: [62889]  Problem with SSL certificate for url  for 'partner.googleadservices.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:34:21,760 INFO o.a.j.p.h.p.ProxyControl: Add sample Launch-89 into controller Launch
+2025-06-12 01:34:55,596 WARN o.a.j.p.h.p.Proxy: [62904]  Problem with SSL certificate for url  for 'push.services.mozilla.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:34:57,729 WARN o.a.j.p.h.p.Proxy: [62911]  Problem with SSL certificate for url  for 'www.google.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:35:04,149 INFO o.a.j.p.h.p.ProxyControl: [62920]  Creating entry sedoparking.com in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:35:07,029 INFO o.a.j.p.h.p.ProxyControl: Add sample Launch-103 into controller Launch
+2025-06-12 01:35:07,637 INFO o.a.j.p.h.p.ProxyControl: Add sample Launch-104 into controller Launch
+2025-06-12 01:35:08,020 INFO o.a.j.p.h.p.Proxy: [62920]  KeyStore for SSL loaded OK and put host 'sedoparking.com' in map with key (sedoparking.com)
+2025-06-12 01:35:08,023 WARN o.a.j.p.h.p.Proxy: [62920]  Problem with SSL certificate for url  for 'sedoparking.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:35:14,801 INFO o.a.j.p.h.p.ProxyControl: [62931]  Creating entry img.sedoparking.com in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:35:17,825 INFO o.a.j.p.h.p.Proxy: [62931]  KeyStore for SSL loaded OK and put host 'img.sedoparking.com' in map with key (img.sedoparking.com)
+2025-06-12 01:35:17,828 WARN o.a.j.p.h.p.Proxy: [62931]  Problem with SSL certificate for url  for 'img.sedoparking.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:35:19,225 INFO o.a.j.p.h.p.ProxyControl: Add sample Launch-105 into controller Launch
+2025-06-12 01:35:19,256 WARN o.a.j.p.h.p.Proxy: [62935]  Problem with SSL certificate for url  for 'parking3.parklogic.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:35:19,271 WARN o.a.j.p.h.p.Proxy: [62939]  Problem with SSL certificate for url  for 'syndicatedsearch.goog'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2025-06-12 01:35:19,276 WARN o.a.j.p.h.p.Proxy: [62940]  Problem with SSL certificate for url  for 'syndicatedsearch.goog'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:35:19,377 WARN o.a.j.p.h.p.Proxy: [62946]  Problem with SSL certificate for url  for 'partner.googleadservices.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:35:19,835 INFO o.a.j.p.h.p.ProxyControl: Add sample Launch-107 into controller Launch
+2025-06-12 01:36:03,625 WARN o.a.j.p.h.p.Proxy: [62963]  Problem with SSL certificate for url  for 'www.google.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:05,080 WARN o.a.j.p.h.p.Proxy: [62973]  Problem with SSL certificate for url  for 'parking3.parklogic.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:05,107 WARN o.a.j.p.h.p.Proxy: [62977]  Problem with SSL certificate for url  for 'syndicatedsearch.goog'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:05,117 WARN o.a.j.p.h.p.Proxy: [62978]  Problem with SSL certificate for url  for 'syndicatedsearch.goog'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2025-06-12 01:36:05,137 INFO o.a.j.p.h.p.ProxyControl: Add sample Launch-116 into controller Launch
+2025-06-12 01:36:05,189 WARN o.a.j.p.h.p.Proxy: [62984]  Problem with SSL certificate for url  for 'partner.googleadservices.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:05,541 INFO o.a.j.p.h.p.ProxyControl: Add sample Launch-118 into controller Launch
+2025-06-12 01:36:06,869 WARN o.a.j.p.h.p.Proxy: [62991]  Problem with SSL certificate for url  for 'www.google.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:08,986 INFO o.a.j.p.h.p.ProxyControl: Add sample Launch-127 into controller Launch
+2025-06-12 01:36:12,366 WARN o.a.j.p.h.p.Proxy: [63003]  Problem with SSL certificate for url  for 'parking3.parklogic.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:12,394 WARN o.a.j.p.h.p.Proxy: [63007]  Problem with SSL certificate for url  for 'syndicatedsearch.goog'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2025-06-12 01:36:12,400 WARN o.a.j.p.h.p.Proxy: [63008]  Problem with SSL certificate for url  for 'syndicatedsearch.goog'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2025-06-12 01:36:12,439 INFO o.a.j.p.h.p.ProxyControl: Add sample Launch-129 into controller Launch
+2025-06-12 01:36:12,509 WARN o.a.j.p.h.p.Proxy: [63014]  Problem with SSL certificate for url  for 'partner.googleadservices.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:12,847 INFO o.a.j.p.h.p.ProxyControl: Add sample Launch-131 into controller Launch
+2025-06-12 01:36:16,182 WARN o.a.j.p.h.p.Proxy: [63021]  Problem with SSL certificate for url  for 'www.google.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:22,807 WARN o.a.j.p.h.p.Proxy: [63030]  Problem with SSL certificate for url  for 'www.google.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:23,452 WARN o.a.j.p.h.p.Proxy: [63037]  Problem with SSL certificate for url  for 'www.google.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:23,603 WARN o.a.j.p.h.p.Proxy: [63044]  Problem with SSL certificate for url  for 'www.google.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:24,151 WARN o.a.j.p.h.p.Proxy: [63051]  Problem with SSL certificate for url  for 'www.google.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:24,422 WARN o.a.j.p.h.p.Proxy: [63058]  Problem with SSL certificate for url  for 'www.google.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:27,382 INFO o.a.j.p.h.p.ProxyControl: [63065]  Creating entry demoqa.com in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:36:29,795 INFO o.a.j.p.h.p.Proxy: [63065]  KeyStore for SSL loaded OK and put host 'demoqa.com' in map with key (demoqa.com)
+2025-06-12 01:36:29,804 WARN o.a.j.p.h.p.Proxy: [63065]  Problem with SSL certificate for url  for 'demoqa.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:30,191 WARN o.a.j.p.h.p.Proxy: [63077]  Problem with SSL certificate for url  for 'demoqa.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:30,329 INFO o.a.j.p.h.p.ProxyControl: Add sample Launch-155 into controller Launch
+2025-06-12 01:36:30,394 WARN o.a.j.p.h.p.Proxy: [63084]  Problem with SSL certificate for url  for 'demoqa.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:30,529 INFO o.a.j.p.h.p.ProxyControl: Add sample Launch-157 into controller Launch
+2025-06-12 01:36:34,500 INFO o.a.j.p.h.s.h.LazyLayeredConnectionSocketFactory: Setting up HTTPS TrustAll Socket Factory
+2025-06-12 01:36:34,505 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2025-06-12 01:36:34,505 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2025-06-12 01:36:34,674 INFO o.a.j.u.SSLManager: JmeterKeyStore Location:  type JKS
+2025-06-12 01:36:34,676 INFO o.a.j.u.SSLManager: KeyStore created OK
+2025-06-12 01:36:34,676 WARN o.a.j.u.SSLManager: Keystore file not found, loading empty keystore
+2025-06-12 01:36:35,082 INFO o.a.j.p.h.p.ProxyControl: [63094]  Creating entry code.jquery.com in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:36:35,102 WARN o.a.j.p.h.p.Proxy: [63099]  Problem with SSL certificate for url  for 'www.google.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:35,215 INFO o.a.j.p.h.p.ProxyControl: Add sample Launch-166 into controller Launch
+2025-06-12 01:36:38,130 INFO o.a.j.p.h.p.ProxyControl: [63096]  Creating entry stackpath.bootstrapcdn.com in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:36:38,186 INFO o.a.j.p.h.p.Proxy: [63094]  KeyStore for SSL loaded OK and put host 'code.jquery.com' in map with key (code.jquery.com)
+2025-06-12 01:36:38,195 WARN o.a.j.p.h.p.Proxy: [63094]  Problem with SSL certificate for url  for 'code.jquery.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:40,784 INFO o.a.j.p.h.p.ProxyControl: [63117]  Creating entry www.googletagservices.com in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:36:40,833 INFO o.a.j.p.h.p.Proxy: [63096]  KeyStore for SSL loaded OK and put host 'stackpath.bootstrapcdn.com' in map with key (stackpath.bootstrapcdn.com)
+2025-06-12 01:36:40,840 WARN o.a.j.p.h.p.Proxy: [63095]  Problem with SSL certificate for url  for 'code.jquery.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:40,842 WARN o.a.j.p.h.p.Proxy: [63096]  Problem with SSL certificate for url  for 'stackpath.bootstrapcdn.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:40,852 WARN o.a.j.p.h.p.Proxy: [63121]  Problem with SSL certificate for url  for 'www.google.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:42,367 INFO o.a.j.p.h.p.ProxyControl: Add sample Launch-178 into controller Launch
+2025-06-12 01:36:43,021 INFO o.a.j.p.h.p.ProxyControl: [63116]  Creating entry pagead2.googlesyndication.com in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:36:43,080 INFO o.a.j.p.h.p.Proxy: [63117]  KeyStore for SSL loaded OK and put host 'www.googletagservices.com' in map with key (www.googletagservices.com)
+2025-06-12 01:36:43,089 WARN o.a.j.p.h.p.Proxy: [63117]  Problem with SSL certificate for url  for 'www.googletagservices.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:45,325 INFO o.a.j.p.h.p.ProxyControl: [63122]  Creating entry www.googletagmanager.com in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:36:45,378 INFO o.a.j.p.h.p.Proxy: [63116]  KeyStore for SSL loaded OK and put host 'pagead2.googlesyndication.com' in map with key (pagead2.googlesyndication.com)
+2025-06-12 01:36:45,387 WARN o.a.j.p.h.p.Proxy: [63116]  Problem with SSL certificate for url  for 'pagead2.googlesyndication.com'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2025-06-12 01:36:45,387 WARN o.a.j.p.h.p.Proxy: [63133]  Problem with SSL certificate for url  for 'pagead2.googlesyndication.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:47,635 INFO o.a.j.p.h.p.ProxyControl: [63118]  Creating entry ad.plus in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:36:47,698 INFO o.a.j.p.h.p.Proxy: [63122]  KeyStore for SSL loaded OK and put host 'www.googletagmanager.com' in map with key (www.googletagmanager.com)
+2025-06-12 01:36:47,706 WARN o.a.j.p.h.p.Proxy: [63122]  Problem with SSL certificate for url  for 'www.googletagmanager.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:50,074 INFO o.a.j.p.h.p.ProxyControl: [63149]  Creating entry cdn.ad.plus in /Users/bidyashreepaul/jmeter/5.6.3/libexec/bin/proxyserver.jks
+2025-06-12 01:36:50,137 INFO o.a.j.p.h.p.Proxy: [63118]  KeyStore for SSL loaded OK and put host 'ad.plus' in map with key (ad.plus)
+2025-06-12 01:36:50,145 WARN o.a.j.p.h.p.Proxy: [63118]  Problem with SSL certificate for url  for 'ad.plus'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2025-06-12 01:36:52,859 INFO o.a.j.p.h.p.Proxy: [63149]  KeyStore for SSL loaded OK and put host 'cdn.ad.plus' in map with key (cdn.ad.plus)
+2025-06-12 01:36:52,867 WARN o.a.j.p.h.p.Proxy: [63149]  Problem with SSL certificate for url  for 'cdn.ad.plus'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2025-06-12 01:36:58,169 WARN o.a.j.p.h.p.Proxy: [63184]  Problem with SSL certificate for url  for 'ads.mozilla.org'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2025-06-12 01:36:58,169 WARN o.a.j.p.h.p.Proxy: [63185]  Problem with SSL certificate for url  for 'merino.services.mozilla.com'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2025-06-12 01:36:58,176 WARN o.a.j.p.h.p.Proxy: [63186]  Problem with SSL certificate for url  for 'merino.services.mozilla.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:58,189 WARN o.a.j.p.h.p.Proxy: [63187]  Problem with SSL certificate for url  for 'merino.services.mozilla.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:58,195 WARN o.a.j.p.h.p.Proxy: [63190]  Problem with SSL certificate for url  for 'merino.services.mozilla.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:58,765 WARN o.a.j.p.h.p.Proxy: [63198]  Problem with SSL certificate for url  for 'parking3.parklogic.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:58,794 WARN o.a.j.p.h.p.Proxy: [63203]  Problem with SSL certificate for url  for 'parking3.parklogic.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:58,875 INFO o.a.j.p.h.p.ProxyControl: Add sample TextBox-199 into controller TextBox
+2025-06-12 01:36:59,076 WARN o.a.j.p.h.p.Proxy: [63210]  Problem with SSL certificate for url  for 'syndicatedsearch.goog'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:36:59,080 WARN o.a.j.p.h.p.Proxy: [63211]  Problem with SSL certificate for url  for 'syndicatedsearch.goog'? Ensure browser is set to accept the JMeter proxy cert: Received fatal alert: unknown_ca
+2025-06-12 01:36:59,692 INFO o.a.j.p.h.p.ProxyControl: Add sample TextBox-207 into controller TextBox
+2025-06-12 01:37:38,394 WARN o.a.j.p.h.p.Proxy: [63227]  Problem with SSL certificate for url  for 'push.services.mozilla.com'? Ensure browser is set to accept the JMeter proxy cert: Broken pipe
+2025-06-12 01:38:01,779 ERROR o.a.j.JMeter: Uncaught exception in thread Thread[#35,AWT-EventQueue-0,6,main]
+java.lang.NumberFormatException: For input string: ""
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[?:?]
+	at java.base/java.lang.Integer.parseInt(Integer.java:672) ~[?:?]
+	at java.base/java.lang.Integer.parseInt(Integer.java:778) ~[?:?]
+	at org.apache.jmeter.protocol.http.proxy.gui.RecorderDialog.lambda$init$0(RecorderDialog.java:167) ~[ApacheJMeter_http.jar:5.6.3]
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972) ~[?:?]
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314) ~[?:?]
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407) ~[?:?]
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262) ~[?:?]
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279) ~[?:?]
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621) ~[?:?]
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398) ~[?:?]
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386) ~[?:?]
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266) ~[?:?]
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996) ~[?:?]
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324) ~[?:?]
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828) ~[?:?]
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948) ~[?:?]
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575) ~[?:?]
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516) ~[?:?]
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310) ~[?:?]
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780) ~[?:?]
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828) ~[?:?]
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775) ~[?:?]
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720) ~[?:?]
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714) ~[?:?]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400) ~[?:?]
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87) ~[?:?]
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98) ~[?:?]
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747) ~[?:?]
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745) ~[?:?]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400) ~[?:?]
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87) ~[?:?]
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744) ~[?:?]
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) [?:?]
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90) [?:?]
+2025-06-12 01:38:07,523 INFO o.a.j.p.h.p.Daemon: HTTP(S) Test Script Recorder stopped
