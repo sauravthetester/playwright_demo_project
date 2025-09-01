@@ -5,16 +5,13 @@ pipeline {
         }
     }
 
-    tools {
-        nodejs "NodeJS-24"
-    }
-
-    environment {
-        NODE_VERSION = '18'
-        PLAYWRIGHT_BROWSERS = '0'   // container already has browsers pre-installed
-    }
-
     stages {
+        stage('Install Git') {
+            steps {
+                sh 'apt-get update && apt-get install -y git'
+            }
+        }
+
         stage('Checkout') {
             steps {
                 checkout scm
@@ -31,30 +28,6 @@ pipeline {
             steps {
                 sh 'npx playwright test --reporter=html'
             }
-            post {
-                always {
-                    publishHTML([
-                        allowMissing: false,
-                        alwaysLinkToLastBuild: true,
-                        keepAll: true,
-                        reportDir: 'playwright-report',
-                        reportFiles: 'index.html',
-                        reportName: 'Playwright Report'
-                    ])
-                }
-            }
-        }
-    }
-
-    post {
-        always {
-            cleanWs()
-        }
-        failure {
-            echo '❌ Pipeline failed!'
-        }
-        success {
-            echo '✅ Pipeline succeeded!'
         }
     }
 }
