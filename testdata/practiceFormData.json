@@ -1,0 +1,92 @@
+[
+  {
+    "testId": "user1",
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@example.com",
+    "gender": "Male",
+    "mobile": "9876543210",
+    "dateOfBirth": {
+      "day": "15",
+      "month": "August",
+      "year": "1995"
+    },
+    "subjects": ["Maths", "English"],
+    "hobbies": ["Sports", "Reading"],
+    "currentAddress": "123 Main Street, Downtown",
+    "state": "NCR",
+    "city": "Delhi"
+  },
+  {
+    "testId": "user2",
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "email": "jane.smith@test.com",
+    "gender": "Female",
+    "mobile": "8765432109",
+    "dateOfBirth": {
+      "day": "22",
+      "month": "March",
+      "year": "1990"
+    },
+    "subjects": ["Physics", "Chemistry"],
+    "hobbies": ["Music", "Reading"],
+    "currentAddress": "456 Oak Avenue, Uptown",
+    "state": "Uttar Pradesh",
+    "city": "Agra"
+  },
+  {
+    "testId": "user3",
+    "firstName": "Alex",
+    "lastName": "Johnson",
+    "email": "alex.johnson@demo.org",
+    "gender": "Other",
+    "mobile": "7654321098",
+    "dateOfBirth": {
+      "day": "10",
+      "month": "December",
+      "year": "1985"
+    },
+    "subjects": ["Computer Science", "Maths"],
+    "hobbies": ["Sports", "Music"],
+    "currentAddress": "789 Pine Road, Suburb",
+    "state": "Haryana",
+    "city": "Karnal"
+  },
+  {
+    "testId": "user4",
+    "firstName": "Maria",
+    "lastName": "Garcia",
+    "email": "maria.garcia@sample.net",
+    "gender": "Female",
+    "mobile": "6543210987",
+    "dateOfBirth": {
+      "day": "05",
+      "month": "June",
+      "year": "1992"
+    },
+    "subjects": ["Biology", "Chemistry"],
+    "hobbies": ["Reading"],
+    "currentAddress": "321 Cedar Lane, Midtown",
+    "state": "Rajasthan",
+    "city": "Jaipur"
+  },
+  {
+    "testId": "user5",
+    "firstName": "David",
+    "lastName": "Wilson",
+    "email": "david.wilson@testing.co",
+    "gender": "Male",
+    "mobile": "5432109876",
+    "dateOfBirth": {
+      "day": "18",
+      "month": "September",
+      "year": "1988"
+    },
+    "subjects": ["English", "History"],
+    "hobbies": ["Sports"],
+    "currentAddress": "654 Elm Street, Old Town",
+    "state": "NCR",
+    "city": "Gurgaon"
+  }
+]

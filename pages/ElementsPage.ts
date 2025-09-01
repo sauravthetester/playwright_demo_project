@@ -8,10 +8,10 @@ export class ElementsPage {
   readonly webTablesSubMenu: Locator;
 
   constructor(private readonly page: Page) {
-      this.elementPage = page;
-      this.textBoxSubMenu = page.getByRole('listitem').filter({ hasText: 'Text Box'});
-      this.buttonsSubMenu = page.getByRole('listitem').filter({ hasText: 'Buttons' });
-      this.webTablesSubMenu = page.getByRole('listitem').filter({ hasText: 'Web Tables' });
+    this.elementPage = page;
+    this.textBoxSubMenu = page.getByRole('listitem').filter({ hasText: 'Text Box'});
+    this.buttonsSubMenu = page.getByRole('listitem').filter({ hasText: 'Buttons' });
+    this.webTablesSubMenu = page.getByRole('listitem').filter({ hasText: 'Web Tables' });
   }
 
   async clickTextBoxSubMenu() {

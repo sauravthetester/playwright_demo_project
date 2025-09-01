@@ -13,7 +13,12 @@ test.describe('Text Box Tests', () => {
   });
 
   // Test to verify the text box submission functionality
-  test('Text Box Submission Test', async ({ homePage, elementsPage, textBoxPage }) => {
+  test('Text Box Submission Test', {
+    annotation: {
+      type: 'smoke',
+      description: 'Core functionality test for form submission with data validation'
+    }
+  }, async ({ homePage, elementsPage, textBoxPage }) => {
     // amazon-qa/login
     // amazon-dev/login
     // amazon-prod/login

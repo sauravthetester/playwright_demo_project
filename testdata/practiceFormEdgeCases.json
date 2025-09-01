@@ -1,0 +1,56 @@
+[
+  {
+    "testId": "edge_case_1",
+    "firstName": "A",
+    "lastName": "Z",
+    "email": "a.z@edge.test",
+    "gender": "Male",
+    "mobile": "1234567890",
+    "dateOfBirth": {
+      "day": "01",
+      "month": "January",
+      "year": "2000"
+    },
+    "subjects": ["Maths"],
+    "hobbies": ["Sports"],
+    "currentAddress": "Single Char Test",
+    "state": "NCR",
+    "city": "Delhi"
+  },
+  {
+    "testId": "long_data_test",
+    "firstName": "VeryLongFirstNameForTesting",
+    "lastName": "VeryLongLastNameForTestingPurposes",
+    "email": "very.long.email.address.for.testing@verylongdomainname.co.uk",
+    "gender": "Female",
+    "mobile": "9999999999",
+    "dateOfBirth": {
+      "day": "31",
+      "month": "December",
+      "year": "1999"
+    },
+    "subjects": ["English", "History", "Civics"],
+    "hobbies": ["Sports", "Reading", "Music"],
+    "currentAddress": "Very Long Address Line for Testing Purposes: 12345 Extremely Long Street Name, Very Long Neighborhood Name, Extended City District",
+    "state": "Uttar Pradesh",
+    "city": "Meera"
+  },
+  {
+    "testId": "special_chars",
+    "firstName": "John-Paul",
+    "lastName": "O'Connor",
+    "email": "john.paul+test@domain-name.org",
+    "gender": "Other",
+    "mobile": "0123456789",
+    "dateOfBirth": {
+      "day": "29",
+      "month": "February",
+      "year": "2000"
+    },
+    "subjects": ["Computer Science"],
+    "hobbies": ["Reading"],
+    "currentAddress": "123 Main St. Apt #4B, Downtown Area",
+    "state": "Haryana",
+    "city": "Panipat"
+  }
+]

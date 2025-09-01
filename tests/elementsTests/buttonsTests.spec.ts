@@ -2,7 +2,12 @@ import { test } from '../../fixtures/MyFixtures';
 
 test.describe('Buttons interaction tests', () => {
 
-  test('Buttons interaction test', async ({ homePage, elementsPage, buttonsPage }) => {
+  test('Buttons interaction test', {
+    annotation: {
+      type: 'smoke',
+      description: 'Core functionality test for button interactions'
+    }
+  }, async ({ homePage, elementsPage, buttonsPage }) => {
 
     await test.step('Navigate to Elements page', async () => {
         await homePage.clickElementsCard();
@@ -23,7 +28,12 @@ test.describe('Buttons interaction tests', () => {
     });
   });
 
-    test('Buttons interaction with locator', async ({ page }) => {
+    test('Buttons interaction with locator', {
+      annotation: {
+        type: 'regression',
+        description: 'Complex authentication and session management test'
+      }
+    }, async ({ page }) => {
 
         await page.goto('https://practice.expandtesting.com/login');
         await page.locator('#username').fill('practice');

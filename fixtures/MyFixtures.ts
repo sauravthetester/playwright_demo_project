@@ -3,12 +3,16 @@ import { HomePage } from '../pages/HomePage';
 import { ElementsPage } from '../pages/ElementsPage';
 import { TextboxPage } from '../pages/elements/TextboxPage';
 import { ButtonsPage } from '../pages/elements/ButtonsPage';
+import { FormsPage } from '../pages/FormsPage';
+import { PracticeFormPage } from '../pages/forms/PracticeFormPage';
 
 type MyFixtures = {
   homePage: HomePage;
   elementsPage: ElementsPage;
   textBoxPage: TextboxPage;
   buttonsPage: ButtonsPage;
+  formsPage: FormsPage;
+  practiceFormPage: PracticeFormPage;
 };
 
 export const test = base.extend<MyFixtures>({
@@ -29,6 +33,14 @@ export const test = base.extend<MyFixtures>({
   buttonsPage: async ({ page }, use) => {
     const buttonsPage = new ButtonsPage(page);
     await use(buttonsPage);
+  },
+  formsPage: async ({ page }, use) => {
+    const formsPage = new FormsPage(page);
+    await use(formsPage);
+  },
+  practiceFormPage: async ({ page }, use) => {
+    const practiceFormPage = new PracticeFormPage(page);
+    await use(practiceFormPage);
   }
 });
 
