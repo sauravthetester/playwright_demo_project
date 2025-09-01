@@ -2,24 +2,25 @@ pipeline {
     agent {
         docker {
             image 'mcr.microsoft.com/playwright:v1.48.0-jammy'
-            args '-v /var/run/docker.sock:/var/run/docker.sock'
+            args '-u root -v /var/run/docker.sock:/var/run/docker.sock'
         }
     }
 
+/*
     tools {
         nodejs "NodeJS-24"
     }
     
     environment {
-        NODE_VERSION = '18'
+        NODE_VERSION = '24'
         PLAYWRIGHT_BROWSERS = '0'
     }
+    */
     
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', 
-                    url: 'https://github.com/sauravthetester/playwright_demo_project.git'
+                checkout scm
             }
         }
         /*
