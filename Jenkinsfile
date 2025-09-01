@@ -12,7 +12,7 @@ pipeline {
                 checkout scm
             }
         }
-        
+        /*
         stage('Setup Node.js') {
             steps {
                 script {
@@ -21,6 +21,7 @@ pipeline {
                 }
             }
         }
+        */
         
         stage('Install Dependencies') {
             steps {
