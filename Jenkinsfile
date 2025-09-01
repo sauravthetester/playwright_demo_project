@@ -1,16 +1,11 @@
 pipeline {
-    agent {
-        docker {
-            image 'mcr.microsoft.com/playwright:v1.48.0-jammy'
-        }
-    }
+    agent any
 
     stages {
         stage('Checkout') {
             steps {
-                dir("${env.WORKSPACE}") {
-                    checkout scm
-                }
+                git branch: 'main',
+                    url: 'https://github.com/sauravthetester/playwright_demo_project.git'
             }
         }
 
@@ -20,34 +15,20 @@ pipeline {
             }
         }
 
-        stage('Run Tests') {
+        stage('Run Playwright Tests') {
             steps {
-                sh 'npx playwright test --reporter=html'
-            }
-            post {
-                always {
-                    publishHTML([
-                        allowMissing: false,
-                        alwaysLinkToLastBuild: true,
-                        keepAll: true,
-                        reportDir: 'playwright-report',
-                        reportFiles: 'index.html',
-                        reportName: 'Playwright Report'
-                    ])
-                }
+                sh 'npx playwright test --reporter=line,junit,html'
             }
         }
-    }
 
-    post {
-        always {
-            cleanWs()
-        }
-        failure {
-            echo 'Pipeline failed!'
-        }
-        success {
-            echo 'Pipeline succeeded!'
+        stage('Archive Reports') {
+            steps {
+                // Archive JUnit test results for Jenkins Test Report
+                junit 'playwright-report/results.xml'
+
+                // Archive Playwright HTML report so it can be downloaded
+                archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: true
+            }
         }
     }
 }
