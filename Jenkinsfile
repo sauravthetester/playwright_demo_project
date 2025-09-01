@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'mcr.microsoft.com/playwright:v1.48.0-jammy'
-            args '--ipc=host'
+            args '-v /var/run/docker.sock:/var/run/docker.sock'
         }
     }
 
