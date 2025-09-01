@@ -8,7 +8,9 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                dir("${env.WORKSPACE}") {
+                    checkout scm
+                }
             }
         }
 
