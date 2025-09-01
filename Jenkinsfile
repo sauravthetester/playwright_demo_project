@@ -11,6 +11,17 @@ pipeline {
     }
 
     stages {
+
+        stage('Debug Workspace') {
+            steps {
+                sh '''
+                  pwd
+                  ls -la
+                  git rev-parse --is-inside-work-tree || echo "Not a git repo yet"
+                '''
+            }
+        }
+        
         stage('Checkout') {
             steps {
                 git branch: 'master', url: 'https://github.com/sauravthetester/playwright_demo_project.git'
