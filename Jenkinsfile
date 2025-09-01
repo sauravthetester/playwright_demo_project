@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'mcr.microsoft.com/playwright:v1.48.0-jammy'
+            args '--ipc=host'
+        }
+    }
 
     tools {
         nodejs "NodeJS-24"
@@ -33,11 +38,13 @@ pipeline {
             }
         }
         
+        /*
         stage('Install Playwright Browsers') {
             steps {
                 sh 'npx playwright install --with-deps'
             }
         }
+        */
         
         stage('Run Tests') {
             steps {
