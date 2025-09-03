@@ -5,7 +5,7 @@ test.describe('Buttons interaction tests', () => {
   test('Buttons interaction test', {
     annotation: {
       type: 'smoke',
-      description: 'Core functionality test for button interactions'
+      description: 'Core functionality test for button interactions.'
     }
   }, async ({ homePage, elementsPage, buttonsPage }) => {
 
