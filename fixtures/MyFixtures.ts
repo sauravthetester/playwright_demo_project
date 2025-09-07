@@ -18,6 +18,7 @@ type MyFixtures = {
 export const test = base.extend<MyFixtures>({
   homePage: async ({ page }, use) => {
     await page.goto('https://demoqa.com/');
+    await page.waitForLoadState('domcontentloaded');
     const homePage = new HomePage(page);
     await use(homePage);
   },

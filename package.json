@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "playwright test --headed",
     "test:chrome": "npx playwright test",
@@ -10,18 +11,23 @@
     "test:debug": "playwright test --headed --debug",
     "test:report": "playwright show-report",
     "test:sharded": "playwright test --shard=1/2",
-    "mcp": "playwright-mcp"
+    "mcp": "PLAYWRIGHT_PROJECT_PATH=/Users/bidyashreepaul/Documents/GitHub/playwright_demo_project ts-node /Users/bidyashreepaul/Documents/GitHub/playwright_demo_project/index.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/mcp": "^0.0.35",
-    "@playwright/test": "^1.53.0",
+    "@playwright/test": "^1.55.0",
     "@types/node": "^24.0.0"
   },
   "dependencies": {
     "@cucumber/cucumber": "^12.1.0",
-    "fs": "^0.0.1-security"
+    "@modelcontextprotocol/sdk": "^1.17.5",
+    "fs": "^0.0.1-security",
+    "playwright": "^1.55.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2",
+    "zod": "^3.25.76"
   }
 }

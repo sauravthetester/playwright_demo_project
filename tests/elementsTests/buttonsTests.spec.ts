@@ -1,6 +1,5 @@
 import { test } from '../../fixtures/MyFixtures';
 
-
 test.describe('Buttons interaction tests', () => {
 
   test('Buttons interaction test', {
