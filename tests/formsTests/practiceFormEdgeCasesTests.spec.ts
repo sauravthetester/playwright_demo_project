@@ -59,7 +59,7 @@ test.describe('Practice Form Edge Cases Tests', () => {
       await practiceFormPage.verifyFormSubmission(edgeCaseTestData[1]);
       await practiceFormPage.closeModal();
     });
-    
+
   });
 
   test('Special Characters Form Submission', {

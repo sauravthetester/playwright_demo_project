@@ -94,7 +94,7 @@ export class PracticeFormPage {
         for (const subject of subjects) {
             await this.subjectsInput.click();
             await this.subjectsInput.type(subject);
-            await this.page.getByText(subject, { exact: true }).first().click();
+            await this.page.locator('.subjects-auto-complete__input').getByText(subject, { exact: true }).first().click();
         }
     }
 
