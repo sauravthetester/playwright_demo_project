@@ -16,10 +16,10 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 1,
   workers: process.env.CI ? 1 : 3,
-  reporter: 'list',
-  timeout: 180 * 1000,
+  reporter: [['line'], ['allure-playwright']],
+  timeout: 100 * 1000,
   use: {
-    trace: 'on-first-retry',
+    trace: 'retain-on-failure',
     headless: false,
     baseURL: 'https://demoqa.com/',
     acceptDownloads: true
@@ -28,7 +28,11 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: { 
+        ...devices['Desktop Chrome'],
+        viewport: { width: 1080, height: 700 }
+     },
+
     },
   ],
 });

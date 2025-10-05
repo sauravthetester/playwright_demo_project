@@ -13,14 +13,16 @@ test.describe('Buttons interaction tests', () => {
         await homePage.clickElementsCard();
     });
   
-    await test.step('Click on Text Box sub-menu', async () => {
+    await test.step('Click on Buttons sub-menu', async () => {
         await elementsPage.clickButtonsSubMenu();
     });
+
     await test.step('Click on buttons', async () => {
         await buttonsPage.doubleClick();
         await buttonsPage.rightClick();
         await buttonsPage.regularClick();
     });
+
     await test.step('Verify button interaction messages', async () => {
         await buttonsPage.verifyDoubleClickMessage();
         await buttonsPage.verifyRightClickMessage();
@@ -28,20 +30,31 @@ test.describe('Buttons interaction tests', () => {
     });
   });
 
-    test('Buttons interaction with locator', {
-      annotation: {
-        type: 'regression',
-        description: 'Complex authentication and session management test'
-      }
-    }, async ({ page }) => {
+  test('Buttons interaction with locator', {
+    annotation: {
+      type: 'regression',
+      description: 'Complex authentication and session management test'
+    }
+  }, async ({ loginPage }) => {
 
-        await page.goto('https://practice.expandtesting.com/login');
-        await page.locator('#username').fill('practice');
-        await page.locator('#password').fill('SuperSecretPassword!');
-        await page.getByRole('button', { name: 'Login' }).click();
-        await page.clock.fastForward('30:00');
-        await page.context().clearCookies();
-        await page.reload();
-        await page.waitForTimeout(20000);
+    await test.step('Navigate to login page', async () => {
+      await loginPage.navigateToLoginPage();
     });
+
+    await test.step('Perform login', async () => {
+      await loginPage.login('practice', 'SuperSecretPassword!');
+    });
+
+    await test.step('Verify successful login', async () => {
+      await loginPage.verifySuccessfulLogin();
+    });
+
+    await test.step('Simulate session expiration', async () => {
+      await loginPage.performSessionExpirationTest();
+    });
+
+    await test.step('Wait for session timeout', async () => {
+      await loginPage.waitForTimeout(20000);
+    });
+  });
 });

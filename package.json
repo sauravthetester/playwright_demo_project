@@ -10,8 +10,7 @@
     "test:headless": "playwright test --headless",
     "test:debug": "playwright test --headed --debug",
     "test:report": "playwright show-report",
-    "test:sharded": "playwright test --shard=1/2",
-    "mcp": "PLAYWRIGHT_PROJECT_PATH=/Users/bidyashreepaul/Documents/GitHub/playwright_demo_project ts-node /Users/bidyashreepaul/Documents/GitHub/playwright_demo_project/index.ts"
+    "test:sharded": "playwright test --shard=1/2"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +18,8 @@
   "devDependencies": {
     "@playwright/mcp": "^0.0.35",
     "@playwright/test": "^1.55.0",
-    "@types/node": "^24.0.0"
+    "@types/node": "^24.0.0",
+    "allure-playwright": "^3.4.1"
   },
   "dependencies": {
     "@cucumber/cucumber": "^12.1.0",

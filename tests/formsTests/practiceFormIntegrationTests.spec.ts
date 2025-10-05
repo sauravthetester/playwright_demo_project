@@ -5,7 +5,7 @@ import { promises as fs } from 'fs';
 // This is a comprehensive integration test that combines both datasets
 test.describe('Complete Practice Form Integration Tests', () => {
 
-  test('Combined Dataset Integration Test', {
+  test('Combined Dataset Integration Tests', {
     annotation: {
       type: 'regression',
       description: 'Integration test using both primary and edge case datasets'

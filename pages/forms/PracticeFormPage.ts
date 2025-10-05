@@ -1,4 +1,5 @@
 import { Page, Locator, expect } from '@playwright/test';
+import { LocatorFallback } from '../utils/LocatorFallback';
 
 export interface FormData {
     testId: string;
@@ -36,24 +37,128 @@ export class PracticeFormPage {
     readonly modalCloseButton: Locator;
     readonly monthDropdown: Locator;
     readonly yearDropdown: Locator;
+    private locatorFallback: LocatorFallback;
 
     constructor(page: Page) {
         this.page = page;
-        this.firstNameInput = page.getByRole('textbox', { name: 'First Name' });
-        this.lastNameInput = page.getByRole('textbox', { name: 'Last Name' });
-        this.emailInput = page.getByRole('textbox', { name: 'name@example.com' });
-        this.mobileInput = page.getByRole('textbox', { name: 'Mobile Number' });
-        this.dateOfBirthInput = page.locator('#dateOfBirthInput');
-        this.subjectsInput = page.locator('#subjectsInput');
-        this.currentAddressInput = page.getByRole('textbox', { name: 'Current Address' });
-        this.stateDropdown = page.locator('#state');
-        this.cityDropdown = page.locator('#city');
-        this.submitButton = page.getByRole('button', { name: 'Submit' });
-        this.modalDialog = page.locator('.modal-dialog');
-        this.modalTitle = page.locator('#example-modal-sizes-title-lg');
-        this.modalCloseButton = page.locator('#closeLargeModal');
-        this.monthDropdown = page.getByRole('combobox').first();
-        this.yearDropdown = page.getByRole('combobox').nth(1);
+        this.locatorFallback = new LocatorFallback(page);
+
+        // First Name Input with fallback strategies
+        this.firstNameInput = this.locatorFallback.getInputLocator(
+            'firstName',
+            'First Name',
+            'First Name',
+            'First Name'
+        );
+
+        // Last Name Input with fallback strategies
+        this.lastNameInput = this.locatorFallback.getInputLocator(
+            'lastName',
+            'Last Name',
+            'Last Name',
+            'Last Name'
+        );
+
+        // Email Input with fallback strategies
+        this.emailInput = this.locatorFallback.getLocatorWithOr([
+            () => page.locator('#userEmail'),
+            () => page.getByRole('textbox', { name: 'name@example.com' }),
+            () => page.getByPlaceholder('name@example.com'),
+            () => page.locator('input[type="email"]'),
+            () => page.locator('input[placeholder*="example.com"]')
+        ]);
+
+        // Mobile Input with fallback strategies
+        this.mobileInput = this.locatorFallback.getLocatorWithOr([
+            () => page.locator('#userNumber'),
+            () => page.getByRole('textbox', { name: 'Mobile Number' }),
+            () => page.getByPlaceholder('Mobile Number'),
+            () => page.locator('input[placeholder*="Mobile"]')
+        ]);
+
+        // Date of Birth Input with fallback strategies
+        this.dateOfBirthInput = this.locatorFallback.getLocatorWithOr([
+            () => page.locator('#dateOfBirthInput'),
+            () => page.locator('input[id="dateOfBirthInput"]'),
+            () => page.locator('.react-datepicker__input-container input'),
+            () => page.locator('input[placeholder*="Date"]')
+        ]);
+
+        // Subjects Input with fallback strategies
+        this.subjectsInput = this.locatorFallback.getLocatorWithOr([
+            () => page.locator('#subjectsInput'),
+            () => page.locator('input[id="subjectsInput"]'),
+            () => page.locator('.subjects-auto-complete__input input'),
+            () => page.locator('input[placeholder*="Subjects"]')
+        ]);
+
+        // Current Address Input with fallback strategies
+        this.currentAddressInput = this.locatorFallback.getLocatorWithOr([
+            () => page.locator('#currentAddress'),
+            () => page.getByRole('textbox', { name: 'Current Address' }),
+            () => page.getByPlaceholder('Current Address'),
+            () => page.locator('textarea[placeholder*="Current Address"]')
+        ]);
+
+        // State Dropdown with fallback strategies
+        this.stateDropdown = this.locatorFallback.getLocatorWithOr([
+            () => page.locator('#state'),
+            () => page.locator('#state .css-1wa3eu0-placeholder'),
+            () => page.locator('#state input'),
+            () => page.locator('div[id="state"]')
+        ]);
+
+        // City Dropdown with fallback strategies
+        this.cityDropdown = this.locatorFallback.getLocatorWithOr([
+            () => page.locator('#city'),
+            () => page.locator('#city .css-1wa3eu0-placeholder'),
+            () => page.locator('#city input'),
+            () => page.locator('div[id="city"]')
+        ]);
+
+        // Submit Button with fallback strategies
+        this.submitButton = this.locatorFallback.getButtonLocator(
+            'submit',
+            'Submit'
+        );
+
+        // Modal Dialog with fallback strategies
+        this.modalDialog = this.locatorFallback.getLocatorWithOr([
+            () => page.locator('.modal-dialog'),
+            () => page.locator('[role="dialog"]'),
+            () => page.locator('.modal-content'),
+            () => page.locator('div.modal')
+        ]);
+
+        // Modal Title with fallback strategies
+        this.modalTitle = this.locatorFallback.getLocatorWithOr([
+            () => page.locator('#example-modal-sizes-title-lg'),
+            () => page.locator('.modal-title'),
+            () => page.locator('h4:has-text("Thanks for submitting")'),
+            () => page.locator('[class*="modal-title"]')
+        ]);
+
+        // Modal Close Button with fallback strategies
+        this.modalCloseButton = this.locatorFallback.getLocatorWithOr([
+            () => page.locator('#closeLargeModal'),
+            () => page.locator('button:has-text("Close")'),
+            () => page.locator('.modal button[type="button"]'),
+            () => page.locator('.close')
+        ]);
+
+        // Month Dropdown with fallback strategies
+        this.monthDropdown = this.locatorFallback.getLocatorWithOr([
+            () => page.getByRole('combobox').first(),
+            () => page.locator('.react-datepicker__month-select'),
+            () => page.locator('select.react-datepicker__month-select')
+        ]);
+
+        // Year Dropdown with fallback strategies
+        this.yearDropdown = this.locatorFallback.getLocatorWithOr([
+            () => page.getByRole('combobox').nth(1),
+            () => page.locator('.react-datepicker__year-select'),
+            () => page.locator('select.react-datepicker__year-select')
+        ]);
     }
 
     async fillFirstName(firstName: string): Promise<void> {
@@ -69,7 +174,14 @@ export class PracticeFormPage {
     }
 
     async selectGender(gender: string): Promise<void> {
-        await this.page.getByText(gender, { exact: true }).click();
+        // Gender selection with fallback strategies
+        const genderLocator = this.locatorFallback.getLocatorWithOr([
+            () => this.page.getByText(gender, { exact: true }),
+            () => this.page.locator(`label:has-text("${gender}")`),
+            () => this.page.locator(`input[value="${gender}"] + label`),
+            () => this.page.locator(`label[for*="${gender.toLowerCase()}"]`)
+        ]);
+        await genderLocator.click();
     }
 
     async fillMobile(mobile: string): Promise<void> {
@@ -86,21 +198,33 @@ export class PracticeFormPage {
         // Select month
         await this.monthDropdown.selectOption(month);
         
-        // Select day
-        await this.page.getByRole('option', { name: new RegExp(`Choose.*${day}.*${year}`) }).click();
+        // Select day with fallback strategies
+        const dayLocator = this.locatorFallback.getLocatorWithOr([
+            () => this.page.getByRole('option', { name: new RegExp(`Choose.*${day}.*${year}`) }),
+            () => this.page.locator(`.react-datepicker__day--0${day.padStart(2, '0')}`),
+            () => this.page.locator(`.react-datepicker__day:has-text("${day}")`).first()
+        ]);
+        await dayLocator.click();
     }
 
     async fillSubjects(subjects: string[]): Promise<void> {
         for (const subject of subjects) {
             await this.subjectsInput.click();
-            await this.subjectsInput.type(subject);
-            await this.page.locator('.subjects-auto-complete__input').getByText(subject, { exact: true }).first().click();
+            await this.subjectsInput.fill(subject);
+            await this.subjectsInput.press('Enter');
         }
     }
 
     async selectHobbies(hobbies: string[]): Promise<void> {
         for (const hobby of hobbies) {
-            await this.page.getByText(hobby, { exact: true }).click();
+            // Hobby selection with fallback strategies
+            const hobbyLocator = this.locatorFallback.getLocatorWithOr([
+                () => this.page.getByText(hobby, { exact: true }),
+                () => this.page.locator(`label:has-text("${hobby}")`),
+                () => this.page.locator(`input[value="${hobby}"] + label`),
+                () => this.page.locator(`label[for*="${hobby.toLowerCase()}"]`)
+            ]);
+            await hobbyLocator.click();
         }
     }
 
@@ -110,12 +234,26 @@ export class PracticeFormPage {
 
     async selectState(state: string): Promise<void> {
         await this.stateDropdown.click();
-        await this.page.getByText(state, { exact: true }).click();
+        
+        // State option with fallback strategies
+        const stateOption = this.locatorFallback.getLocatorWithOr([
+            () => this.page.getByText(state, { exact: true }),
+            () => this.page.locator(`div[id*="react-select"]:has-text("${state}")`),
+            () => this.page.locator(`[class*="option"]:has-text("${state}")`)
+        ]);
+        await stateOption.click();
     }
 
     async selectCity(city: string): Promise<void> {
         await this.cityDropdown.click();
-        await this.page.getByText(city, { exact: true }).click();
+        
+        // City option with fallback strategies
+        const cityOption = this.locatorFallback.getLocatorWithOr([
+            () => this.page.getByText(city, { exact: true }),
+            () => this.page.locator(`div[id*="react-select"]:has-text("${city}")`),
+            () => this.page.locator(`[class*="option"]:has-text("${city}")`)
+        ]);
+        await cityOption.click();
     }
 
     async submitForm(): Promise<void> {
@@ -147,8 +285,13 @@ export class PracticeFormPage {
         // Verify modal title
         await expect(this.modalTitle).toHaveText('Thanks for submitting the form');
         
-        // Verify submitted data in modal
-        const modalBody = this.page.locator('.modal-body');
+        // Verify submitted data in modal with fallback strategy
+        const modalBody = this.locatorFallback.getLocatorWithOr([
+            () => this.page.locator('.modal-body'),
+            () => this.page.locator('[class*="modal-body"]'),
+            () => this.modalDialog.locator('tbody')
+        ]);
+
         await expect(modalBody).toContainText(`${formData.firstName} ${formData.lastName}`);
         await expect(modalBody).toContainText(formData.email);
         await expect(modalBody).toContainText(formData.gender);

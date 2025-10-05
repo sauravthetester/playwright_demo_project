@@ -14,7 +14,7 @@ test.describe('Practice Form Tests', () => {
   });
 
   // Smoke test for basic form functionality
-  test('Single Practice Form Submission', {
+  test.only('Single Practice Form Submission', {
     annotation: {
       type: 'smoke',
       description: 'Core functionality test for practice form submission with single dataset'

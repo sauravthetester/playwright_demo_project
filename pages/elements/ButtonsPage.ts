@@ -1,4 +1,5 @@
 import { expect, Locator, Page } from '@playwright/test';
+import { LocatorFallback } from '../utils/LocatorFallback';
 
 export class ButtonsPage {
   readonly doubleClickBtn: Locator;
@@ -7,21 +8,60 @@ export class ButtonsPage {
   readonly doubleClickMessage: Locator;
   readonly rightClickMessage: Locator;
   readonly clickMessage: Locator;
+  private locatorFallback: LocatorFallback;
 
   constructor(private readonly page: Page) {
-    this.doubleClickBtn = page.locator('#doubleClickBtn');
-    this.rightClickBtn = page.locator('#rightClickBtn');
-    this.clickMeBtn = page.getByRole('button', { name: 'Click Me' , exact: true });
-    this.doubleClickMessage = page.locator('#doubleClickMessage');
-    this.rightClickMessage = page.locator('#rightClickMessage');
-    this.clickMessage = page.locator('#dynamicClickMessage');
+    this.locatorFallback = new LocatorFallback(page);
+    
+    // Double Click Button with fallback strategies
+    this.doubleClickBtn = this.locatorFallback.getLocatorWithOr([
+      () => page.locator('#doubleClickBtn'),
+      () => page.getByRole('button', { name: 'Double Click Me' }),
+      () => page.locator('button:has-text("Double Click Me")'),
+      () => page.locator('[onclick*="doubleClick"]')
+    ]);
+
+    // Right Click Button with fallback strategies
+    this.rightClickBtn = this.locatorFallback.getLocatorWithOr([
+      () => page.locator('#rightClickBtn'),
+      () => page.getByRole('button', { name: 'Right Click Me' }),
+      () => page.locator('button:has-text("Right Click Me")'),
+      () => page.locator('[onclick*="rightClick"]')
+    ]);
+
+    // Regular Click Button with fallback strategies
+    this.clickMeBtn = this.locatorFallback.getLocatorWithOr([
+      () => page.getByRole('button', { name: 'Click Me', exact: true }),
+      () => page.locator('button:has-text("Click Me")').nth(2),
+      () => page.locator('[onclick*="dynamicClick"]'),
+      () => page.locator('button').filter({ hasText: /^Click Me$/ }).nth(2)
+    ]);
+
+    // Double Click Message with fallback strategies
+    this.doubleClickMessage = this.locatorFallback.getLocatorWithOr([
+      () => page.locator('#doubleClickMessage'),
+      () => page.locator('p:has-text("double click")'),
+      () => page.getByText('You have done a double click')
+    ]);
+
+    // Right Click Message with fallback strategies
+    this.rightClickMessage = this.locatorFallback.getLocatorWithOr([
+      () => page.locator('#rightClickMessage'),
+      () => page.locator('p:has-text("right click")'),
+      () => page.getByText('You have done a right click')
+    ]);
+
+    // Dynamic Click Message with fallback strategies
+    this.clickMessage = this.locatorFallback.getLocatorWithOr([
+      () => page.locator('#dynamicClickMessage'),
+      () => page.locator('p:has-text("dynamic click")'),
+      () => page.getByText('You have done a dynamic click')
+    ]);
   }
 
   async doubleClick(): Promise<void> {
     await this.doubleClickBtn.dblclick();
   }
-
-
 
   async rightClick(): Promise<void> {
     await this.rightClickBtn.click({ button: 'right' });
@@ -43,5 +83,3 @@ export class ButtonsPage {
     await expect(this.clickMessage).toHaveText('You have done a dynamic click');
   }
 }
-
-
