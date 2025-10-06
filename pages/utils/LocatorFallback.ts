@@ -47,19 +47,26 @@ export class LocatorFallback {
      * @param strategies - Array of locator strategies
      * @returns Combined locator
      */
-    getLocatorWithOr(strategies: (() => Locator)[]): Locator {
-        if (strategies.length === 0) {
-            throw new Error('At least one locator strategy must be provided');
+    async getLocatorWithOr(
+        strategies: Array<() => Locator | Promise<Locator>>,
+        timeout = 3000
+      ): Promise<Locator> {
+        if (strategies.length === 0)
+          throw new Error('At least one locator strategy must be provided');
+      
+        for (const getLocator of strategies) {
+          const locator = await getLocator(); // handles both sync and async
+          try {
+            await locator.first().waitFor({ state: 'visible', timeout });
+            console.log(`✅ Found locator: ${locator.toString()}`);
+            return locator.first();
+          } catch {
+            // Not found yet, continue to next
+          }
         }
-
-        let combinedLocator = strategies[0]();
-        
-        for (let i = 1; i < strategies.length; i++) {
-            combinedLocator = combinedLocator.or(strategies[i]());
-        }
-
-        return combinedLocator;
-    }
+      
+        throw new Error('❌ No fallback locator found');
+      }
 
     /**
      * Creates a locator with common fallback patterns for form inputs
@@ -74,7 +81,7 @@ export class LocatorFallback {
         name?: string,
         placeholder?: string,
         label?: string
-    ): Locator {
+    ): Promise<Locator> {
         const strategies: (() => Locator)[] = [];
 
         if (primaryId) {
@@ -104,7 +111,7 @@ export class LocatorFallback {
         primaryId?: string,
         text?: string,
         role: string = 'button'
-    ): Locator {
+    ): Promise<Locator> {
         const strategies: (() => Locator)[] = [];
 
         if (primaryId) {

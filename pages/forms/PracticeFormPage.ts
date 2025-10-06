@@ -22,21 +22,21 @@ export interface FormData {
 
 export class PracticeFormPage {
     readonly page: Page;
-    readonly firstNameInput: Locator;
-    readonly lastNameInput: Locator;
-    readonly emailInput: Locator;
-    readonly mobileInput: Locator;
-    readonly dateOfBirthInput: Locator;
-    readonly subjectsInput: Locator;
-    readonly currentAddressInput: Locator;
-    readonly stateDropdown: Locator;
-    readonly cityDropdown: Locator;
-    readonly submitButton: Locator;
-    readonly modalDialog: Locator;
-    readonly modalTitle: Locator;
-    readonly modalCloseButton: Locator;
-    readonly monthDropdown: Locator;
-    readonly yearDropdown: Locator;
+    readonly firstNameInput: Promise<Locator>;
+    readonly lastNameInput: Promise<Locator>;
+    readonly emailInput: Promise<Locator>;
+    readonly mobileInput: Promise<Locator>;
+    readonly dateOfBirthInput: Promise<Locator>;
+    readonly subjectsInput: Promise<Locator>;
+    readonly currentAddressInput: Promise<Locator>;
+    readonly stateDropdown: Promise<Locator>;
+    readonly cityDropdown: Promise<Locator>;
+    readonly submitButton: Promise<Locator>;
+    readonly modalDialog: Promise<Locator>;
+    readonly modalTitle: Promise<Locator>;
+    readonly modalCloseButton: Promise<Locator>;
+    readonly monthDropdown: Promise<Locator>;
+    readonly yearDropdown: Promise<Locator>;
     private locatorFallback: LocatorFallback;
 
     constructor(page: Page) {
@@ -162,20 +162,20 @@ export class PracticeFormPage {
     }
 
     async fillFirstName(firstName: string): Promise<void> {
-        await this.firstNameInput.fill(firstName);
+        await (await this.firstNameInput).fill(firstName);
     }
 
     async fillLastName(lastName: string): Promise<void> {
-        await this.lastNameInput.fill(lastName);
+        await (await this.lastNameInput).fill(lastName);
     }
 
     async fillEmail(email: string): Promise<void> {
-        await this.emailInput.fill(email);
+        await (await this.emailInput).fill(email);
     }
 
     async selectGender(gender: string): Promise<void> {
         // Gender selection with fallback strategies
-        const genderLocator = this.locatorFallback.getLocatorWithOr([
+        const genderLocator = await this.locatorFallback.getLocatorWithOr([
             () => this.page.getByText(gender, { exact: true }),
             () => this.page.locator(`label:has-text("${gender}")`),
             () => this.page.locator(`input[value="${gender}"] + label`),
@@ -185,21 +185,21 @@ export class PracticeFormPage {
     }
 
     async fillMobile(mobile: string): Promise<void> {
-        await this.mobileInput.fill(mobile);
+        await (await this.mobileInput).fill(mobile);
     }
 
     async selectDateOfBirth(day: string, month: string, year: string): Promise<void> {
         // Click on date input to open calendar
-        await this.dateOfBirthInput.click();
+        await (await this.dateOfBirthInput).click();
         
         // Select year
-        await this.yearDropdown.selectOption(year);
+        await (await this.yearDropdown).selectOption(year);
         
         // Select month
-        await this.monthDropdown.selectOption(month);
+        await (await this.monthDropdown).selectOption(month);
         
         // Select day with fallback strategies
-        const dayLocator = this.locatorFallback.getLocatorWithOr([
+        const dayLocator = await this.locatorFallback.getLocatorWithOr([
             () => this.page.getByRole('option', { name: new RegExp(`Choose.*${day}.*${year}`) }),
             () => this.page.locator(`.react-datepicker__day--0${day.padStart(2, '0')}`),
             () => this.page.locator(`.react-datepicker__day:has-text("${day}")`).first()
@@ -209,16 +209,16 @@ export class PracticeFormPage {
 
     async fillSubjects(subjects: string[]): Promise<void> {
         for (const subject of subjects) {
-            await this.subjectsInput.click();
-            await this.subjectsInput.fill(subject);
-            await this.subjectsInput.press('Enter');
+            await (await this.subjectsInput).click();
+            await (await this.subjectsInput).fill(subject);
+            await (await this.subjectsInput).press('Enter');
         }
     }
 
     async selectHobbies(hobbies: string[]): Promise<void> {
         for (const hobby of hobbies) {
             // Hobby selection with fallback strategies
-            const hobbyLocator = this.locatorFallback.getLocatorWithOr([
+            const hobbyLocator = await this.locatorFallback.getLocatorWithOr([
                 () => this.page.getByText(hobby, { exact: true }),
                 () => this.page.locator(`label:has-text("${hobby}")`),
                 () => this.page.locator(`input[value="${hobby}"] + label`),
@@ -229,14 +229,14 @@ export class PracticeFormPage {
     }
 
     async fillCurrentAddress(address: string): Promise<void> {
-        await this.currentAddressInput.fill(address);
+        await (await this.currentAddressInput).fill(address);
     }
 
     async selectState(state: string): Promise<void> {
-        await this.stateDropdown.click();
+        await (await this.stateDropdown).click();
         
         // State option with fallback strategies
-        const stateOption = this.locatorFallback.getLocatorWithOr([
+        const stateOption = await this.locatorFallback.getLocatorWithOr([
             () => this.page.getByText(state, { exact: true }),
             () => this.page.locator(`div[id*="react-select"]:has-text("${state}")`),
             () => this.page.locator(`[class*="option"]:has-text("${state}")`)
@@ -245,10 +245,10 @@ export class PracticeFormPage {
     }
 
     async selectCity(city: string): Promise<void> {
-        await this.cityDropdown.click();
+        await (await this.cityDropdown).click();
         
         // City option with fallback strategies
-        const cityOption = this.locatorFallback.getLocatorWithOr([
+        const cityOption = await this.locatorFallback.getLocatorWithOr([
             () => this.page.getByText(city, { exact: true }),
             () => this.page.locator(`div[id*="react-select"]:has-text("${city}")`),
             () => this.page.locator(`[class*="option"]:has-text("${city}")`)
@@ -257,7 +257,7 @@ export class PracticeFormPage {
     }
 
     async submitForm(): Promise<void> {
-        await this.submitButton.click();
+        await (await this.submitButton).click();
     }
 
     async fillCompleteForm(formData: FormData): Promise<void> {
@@ -280,39 +280,39 @@ export class PracticeFormPage {
 
     async verifyFormSubmission(formData: FormData): Promise<void> {
         // Wait for modal to appear
-        await this.modalDialog.waitFor({ state: 'visible' });
+        await (await this.modalDialog).waitFor({ state: 'visible' });
         
         // Verify modal title
-        await expect(this.modalTitle).toHaveText('Thanks for submitting the form');
+        await expect(await this.modalTitle).toHaveText('Thanks for submitting the form');
         
         // Verify submitted data in modal with fallback strategy
         const modalBody = this.locatorFallback.getLocatorWithOr([
             () => this.page.locator('.modal-body'),
             () => this.page.locator('[class*="modal-body"]'),
-            () => this.modalDialog.locator('tbody')
+            async () => (await this.modalDialog).locator('tbody')
         ]);
 
-        await expect(modalBody).toContainText(`${formData.firstName} ${formData.lastName}`);
-        await expect(modalBody).toContainText(formData.email);
-        await expect(modalBody).toContainText(formData.gender);
-        await expect(modalBody).toContainText(formData.mobile);
-        await expect(modalBody).toContainText(`${formData.dateOfBirth.day} ${formData.dateOfBirth.month},${formData.dateOfBirth.year}`);
+        await expect(await modalBody).toContainText(`${formData.firstName} ${formData.lastName}`);
+        await expect(await modalBody).toContainText(formData.email);
+        await expect(await modalBody).toContainText(formData.gender);
+        await expect(await modalBody).toContainText(formData.mobile);
+        await expect(await modalBody).toContainText(`${formData.dateOfBirth.day} ${formData.dateOfBirth.month},${formData.dateOfBirth.year}`);
         
         // Verify subjects
         for (const subject of formData.subjects) {
-            await expect(modalBody).toContainText(subject);
+            await expect(await modalBody).toContainText(subject);
         }
         
         // Verify hobbies
         for (const hobby of formData.hobbies) {
-            await expect(modalBody).toContainText(hobby);
+            await expect(await modalBody).toContainText(hobby);
         }
         
-        await expect(modalBody).toContainText(formData.currentAddress);
-        await expect(modalBody).toContainText(`${formData.state} ${formData.city}`);
+        await expect(await modalBody).toContainText(formData.currentAddress);
+        await expect(await modalBody).toContainText(`${formData.state} ${formData.city}`);
     }
 
     async closeModal(): Promise<void> {
-        await this.modalCloseButton.click();
+        await (await this.modalCloseButton).click();
     }
 }

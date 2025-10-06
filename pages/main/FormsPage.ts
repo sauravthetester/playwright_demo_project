@@ -1,9 +1,9 @@
 import { Page, Locator } from '@playwright/test';
-import { LocatorFallback } from '../pages/utils/LocatorFallback';
+import { LocatorFallback } from '../utils/LocatorFallback';
 
 export class FormsPage {
     readonly page: Page;
-    readonly practiceFormMenuItem: Locator;
+    readonly practiceFormMenuItem: Promise<Locator>;
     private locatorFallback: LocatorFallback;
 
     constructor(page: Page) {
@@ -21,6 +21,6 @@ export class FormsPage {
     }
 
     async clickPracticeFormMenuItem(): Promise<void> {
-        await this.practiceFormMenuItem.click();
+        await (await this.practiceFormMenuItem).click();
     }
 }

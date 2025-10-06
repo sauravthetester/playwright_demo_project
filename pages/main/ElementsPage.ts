@@ -1,11 +1,11 @@
 import { expect, Locator, Page } from '@playwright/test';
-import { LocatorFallback } from './utils/LocatorFallback';
+import { LocatorFallback } from '../utils/LocatorFallback';
 
 export class ElementsPage {
   readonly elementPage: Page;
-  readonly textBoxSubMenu: Locator;
-  readonly buttonsSubMenu: Locator;
-  readonly webTablesSubMenu: Locator;
+  readonly textBoxSubMenu: Promise<Locator>;
+  readonly buttonsSubMenu: Promise<Locator>;
+  readonly webTablesSubMenu: Promise<Locator>;
   private locatorFallback: LocatorFallback;
 
   constructor(private readonly page: Page) {
@@ -41,14 +41,14 @@ export class ElementsPage {
   }
 
   async clickTextBoxSubMenu() {
-    await this.textBoxSubMenu.click();
+    await (await this.textBoxSubMenu).click();
   }
 
   async clickButtonsSubMenu() {
-    await this.buttonsSubMenu.click();
+    await (await this.buttonsSubMenu).click();
   }
 
   async clickWebTablesSubMenu() {
-    await this.webTablesSubMenu.click();
+    await (await this.webTablesSubMenu).click();
   }
 }

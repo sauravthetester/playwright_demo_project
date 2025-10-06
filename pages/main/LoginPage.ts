@@ -1,12 +1,12 @@
 import { expect, Locator, Page } from '@playwright/test';
-import { LocatorFallback } from '../pages/utils/LocatorFallback';
+import { LocatorFallback } from '../utils/LocatorFallback';
 
 export class LoginPage {
-  readonly usernameInput: Locator;
-  readonly passwordInput: Locator;
-  readonly loginButton: Locator;
-  readonly successMessage: Locator;
-  readonly logoutButton: Locator;
+  readonly usernameInput: Promise<Locator>;
+  readonly passwordInput: Promise<Locator>;
+  readonly loginButton: Promise<Locator>;
+  readonly successMessage: Promise<Locator>;
+  readonly logoutButton: Promise<Locator>;
   private locatorFallback: LocatorFallback;
 
   constructor(private readonly page: Page) {
@@ -57,15 +57,15 @@ export class LoginPage {
   }
 
   async fillUsername(username: string): Promise<void> {
-    await this.usernameInput.fill(username);
+    await (await this.usernameInput).fill(username);
   }
 
   async fillPassword(password: string): Promise<void> {
-    await this.passwordInput.fill(password);
+    await (await this.passwordInput).fill(password);
   }
 
   async clickLoginButton(): Promise<void> {
-    await this.loginButton.click();
+    await (await this.loginButton).click();
   }
 
   async login(username: string, password: string): Promise<void> {
@@ -75,7 +75,7 @@ export class LoginPage {
   }
 
   async verifySuccessfulLogin(): Promise<void> {
-    await expect(this.successMessage).toBeVisible();
+    await expect(await this.successMessage).toBeVisible();
   }
 
   async fastForwardTime(time: string): Promise<void> {

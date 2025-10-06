@@ -135,22 +135,22 @@ test.describe('Practice Form Tests', () => {
     await test.step('Test individual field inputs', async () => {
       // Test name fields
       await practiceFormPage.fillFirstName(testUser.firstName);
-      await expect(practiceFormPage.firstNameInput).toHaveValue(testUser.firstName);
+      await expect(await practiceFormPage.firstNameInput).toHaveValue(testUser.firstName);
       
       await practiceFormPage.fillLastName(testUser.lastName);
-      await expect(practiceFormPage.lastNameInput).toHaveValue(testUser.lastName);
+      await expect(await practiceFormPage.lastNameInput).toHaveValue(testUser.lastName);
       
       // Test email field
       await practiceFormPage.fillEmail(testUser.email);
-      await expect(practiceFormPage.emailInput).toHaveValue(testUser.email);
+      await expect(await practiceFormPage.emailInput).toHaveValue(testUser.email);
       
       // Test mobile field
       await practiceFormPage.fillMobile(testUser.mobile);
-      await expect(practiceFormPage.mobileInput).toHaveValue(testUser.mobile);
+      await expect(await practiceFormPage.mobileInput).toHaveValue(testUser.mobile);
       
       // Test address field
       await practiceFormPage.fillCurrentAddress(testUser.currentAddress);
-      await expect(practiceFormPage.currentAddressInput).toHaveValue(testUser.currentAddress);
+      await expect(await practiceFormPage.currentAddressInput).toHaveValue(testUser.currentAddress);
     });
 
     await test.step('Test gender selection', async () => {
@@ -167,7 +167,7 @@ test.describe('Practice Form Tests', () => {
         testUser.dateOfBirth.year
       );
       // Verify date is set (the input should contain the selected date)
-      await expect(practiceFormPage.dateOfBirthInput).toContainText(testUser.dateOfBirth.day);
+      await expect(await practiceFormPage.dateOfBirthInput).toContainText(testUser.dateOfBirth.day);
     });
   });
 });

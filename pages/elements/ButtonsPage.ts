@@ -2,12 +2,12 @@ import { expect, Locator, Page } from '@playwright/test';
 import { LocatorFallback } from '../utils/LocatorFallback';
 
 export class ButtonsPage {
-  readonly doubleClickBtn: Locator;
-  readonly rightClickBtn: Locator;
-  readonly clickMeBtn: Locator;
-  readonly doubleClickMessage: Locator;
-  readonly rightClickMessage: Locator;
-  readonly clickMessage: Locator;
+  readonly doubleClickBtn: Promise<Locator>;
+  readonly rightClickBtn: Promise<Locator>;
+  readonly clickMeBtn: Promise<Locator>;
+  readonly doubleClickMessage: Promise<Locator>;
+  readonly rightClickMessage: Promise<Locator>;
+  readonly clickMessage: Promise<Locator>;
   private locatorFallback: LocatorFallback;
 
   constructor(private readonly page: Page) {
@@ -60,26 +60,26 @@ export class ButtonsPage {
   }
 
   async doubleClick(): Promise<void> {
-    await this.doubleClickBtn.dblclick();
+    await (await this.doubleClickBtn).dblclick();
   }
 
   async rightClick(): Promise<void> {
-    await this.rightClickBtn.click({ button: 'right' });
+    await (await this.rightClickBtn).click({ button: 'right' });
   }
 
   async regularClick(): Promise<void> {
-    await this.clickMeBtn.click();
+    await (await this.clickMeBtn).click();
   }
 
   async verifyDoubleClickMessage(): Promise<void> {
-    await expect(this.doubleClickMessage).toHaveText('You have done a double click');
+    await expect(await this.doubleClickMessage).toHaveText('You have done a double click');
   }
 
   async verifyRightClickMessage(): Promise<void> {
-    await expect(this.rightClickMessage).toHaveText('You have done a right click');
+    await expect(await this.rightClickMessage).toHaveText('You have done a right click');
   }
 
   async verifyClickMessage(): Promise<void> {
-    await expect(this.clickMessage).toHaveText('You have done a dynamic click');
+    await expect(await this.clickMessage).toHaveText('You have done a dynamic click');
   }
 }

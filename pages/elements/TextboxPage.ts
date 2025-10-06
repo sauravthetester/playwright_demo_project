@@ -2,12 +2,12 @@ import { expect, Locator, Page } from '@playwright/test';
 import { LocatorFallback } from '../utils/LocatorFallback';
 
 export class TextboxPage {
-  textBox: Locator;
-  userName: Locator;
-  userEmail: Locator;
-  currentAddress: Locator;
-  permanentAddress: Locator;
-  submitButton: Locator;
+  textBox: Promise<Locator>;
+  userName: Promise<Locator>;
+  userEmail: Promise<Locator>;
+  currentAddress: Promise<Locator>;
+  permanentAddress: Promise<Locator>;
+  submitButton: Promise<Locator>;
   private locatorFallback: LocatorFallback;
 
   constructor(private readonly page: Page) {
@@ -61,11 +61,11 @@ export class TextboxPage {
   }
 
   async fillTextBoxesAndSubmit(data: { name: string; email: string; currentAddress: string; permanentAddress: string }) {
-    await this.userName.fill(data.name);
-    await this.userEmail.fill(data.email);
-    await this.currentAddress.fill(data.currentAddress);
-    await this.permanentAddress.fill(data.permanentAddress);
-    await this.submitButton.click();
+    await (await this.userName).fill(data.name);
+    await (await this.userEmail).fill(data.email);
+    await (await this.currentAddress).fill(data.currentAddress);
+    await (await this.permanentAddress).fill(data.permanentAddress);
+    await (await this.submitButton).click();
   }
 
   async verifySubmission(data: { name: string; email: string; currentAddress: string; permanentAddress: string }) {
@@ -76,9 +76,9 @@ export class TextboxPage {
       () => this.page.locator('body')
     ]);
 
-    await expect(outputSection).toContainText(`Name:${data.name}`);
-    await expect(outputSection).toContainText(`Email:${data.email}`);
-    await expect(outputSection).toContainText(`Current Address :${data.currentAddress}`);
-    await expect(outputSection).toContainText(`Permananet Address :${data.permanentAddress}`);
+    await expect(await outputSection).toContainText(`Name:${data.name}`);
+    await expect(await outputSection).toContainText(`Email:${data.email}`);
+    await expect(await outputSection).toContainText(`Current Address :${data.currentAddress}`);
+    await expect(await outputSection).toContainText(`Permananet Address :${data.permanentAddress}`);
   }
 }

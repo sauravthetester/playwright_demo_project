@@ -1,11 +1,11 @@
 import { test as base } from '@playwright/test';
-import { HomePage } from '../pages/HomePage';
-import { ElementsPage } from '../pages/ElementsPage';
+import { HomePage } from '../pages/main/HomePage';
+import { ElementsPage } from '../pages/main/ElementsPage';
 import { TextboxPage } from '../pages/elements/TextboxPage';
 import { ButtonsPage } from '../pages/elements/ButtonsPage';
-import { FormsPage } from '../pages/FormsPage';
+import { FormsPage } from '../pages/main/FormsPage';
 import { PracticeFormPage } from '../pages/forms/PracticeFormPage';
-import { LoginPage } from '../pages/LoginPage';
+import { LoginPage } from '../pages/main/LoginPage';
 
 type MyFixtures = {
   homePage: HomePage;

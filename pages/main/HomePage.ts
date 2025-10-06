@@ -1,13 +1,13 @@
 import { Locator, Page } from '@playwright/test';
-import { LocatorFallback } from '../pages/utils/LocatorFallback';
+import { LocatorFallback } from '../utils/LocatorFallback';
 
 export class HomePage {
-  readonly elementsCard: Locator;
-  readonly formsCard: Locator;
-  readonly alertsFrameWindowsCard: Locator;
-  readonly widgetsCard: Locator;
-  readonly interactionsCard: Locator;
-  readonly bookStoreAppCard: Locator;
+  readonly elementsCard: Promise<Locator>;
+  readonly formsCard: Promise<Locator>;
+  readonly alertsFrameWindowsCard: Promise<Locator>;
+  readonly widgetsCard: Promise<Locator>;
+  readonly interactionsCard: Promise<Locator>;
+  readonly bookStoreAppCard: Promise<Locator>;
   private locatorFallback: LocatorFallback;
 
   constructor(private readonly page: Page) {
@@ -63,26 +63,26 @@ export class HomePage {
   }
 
   async clickElementsCard(): Promise<void> {
-    await this.elementsCard.click();
+    await (await this.elementsCard).click();
   }
 
   async clickFormsCard(): Promise<void> {
-    await this.formsCard.click();
+    await (await this.formsCard).click();
   }
 
   async clickAlertsFrameWindowsCard(): Promise<void> {
-    await this.alertsFrameWindowsCard.click();
+    await (await this.alertsFrameWindowsCard).click();
   }
 
   async clickWidgetsCard(): Promise<void> {
-    await this.widgetsCard.click();
+    await (await this.widgetsCard).click();
   }
 
   async clickInteractionsCard(): Promise<void> {
-    await this.interactionsCard.click();
+    await (await this.interactionsCard).click();
   }
 
   async clickBookStoreAppCard(): Promise<void> {
-    await this.bookStoreAppCard.click();
+    await (await this.bookStoreAppCard).click();
   }
 }

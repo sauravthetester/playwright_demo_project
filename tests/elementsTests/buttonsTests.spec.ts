@@ -12,6 +12,7 @@ test.describe('Buttons interaction tests', () => {
     await test.step('Navigate to Elements page', async () => {
         await homePage.clickElementsCard();
     });
+    
   
     await test.step('Click on Buttons sub-menu', async () => {
         await elementsPage.clickButtonsSubMenu();

@@ -27,12 +27,24 @@ export default defineConfig({
 
   projects: [
     {
-      name: 'chromium',
+      name: 'element-tests-chrome',
       use: { 
-        ...devices['Desktop Chrome'],
-        viewport: { width: 1080, height: 700 }
+        viewport: { width: 1080, height: 700 },
+        headless: true
      },
-
+     testMatch: [
+        'tests/elementsTests/*.spec.ts'
+      ],
     },
+    {
+      name: 'forms-tests-chrome',
+      use: {
+        viewport: { width: 1080, height: 700 },
+        headless: false
+     },
+     testMatch: [
+        'tests/formsTests/*.spec.ts'
+      ],
+    }
   ],
 });
