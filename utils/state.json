@@ -1,0 +1,369 @@
+{
+  "cookies": [
+    {
+      "name": "_ga",
+      "value": "GA1.2.1902958618.1761187286",
+      "domain": ".demoqa.com",
+      "path": "/",
+      "expires": 1795747286.225875,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gid",
+      "value": "GA1.2.1126405741.1761187286",
+      "domain": ".demoqa.com",
+      "path": "/",
+      "expires": 1761273686,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gat_UA-109033876-1",
+      "value": "1",
+      "domain": ".demoqa.com",
+      "path": "/",
+      "expires": 1761187346,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__gads",
+      "value": "ID=ba1c5065b196277a:T=1761187286:RT=1761187286:S=ALNI_MbiSLmNTgZXlEbMQYGq7hcQ1B6iLw",
+      "domain": ".demoqa.com",
+      "path": "/",
+      "expires": 1794883286,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__gpi",
+      "value": "UID=000012c12a928e94:T=1761187286:RT=1761187286:S=ALNI_MZUlHWkAdU9WwGzSpxKF2JQJA8yqw",
+      "domain": ".demoqa.com",
+      "path": "/",
+      "expires": 1794883286,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__eoi",
+      "value": "ID=9f68b2ed4c0eb329:T=1761187286:RT=1761187286:S=AA-AfjZxvS6yj6D-zscpnO1OOGVX",
+      "domain": ".demoqa.com",
+      "path": "/",
+      "expires": 1776739286,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_cc_dc",
+      "value": "2",
+      "domain": ".crwdcntrl.net",
+      "path": "/",
+      "expires": 1784513220.377831,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_cc_id",
+      "value": "110e6ab61ea1272f0c71b2dc98e50829",
+      "domain": ".crwdcntrl.net",
+      "path": "/",
+      "expires": 1784513220.377904,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_cc_id",
+      "value": "110e6ab61ea1272f0c71b2dc98e50829",
+      "domain": ".demoqa.com",
+      "path": "/",
+      "expires": 1784515291,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "panoramaId_expiry",
+      "value": "1761273691459",
+      "domain": ".demoqa.com",
+      "path": "/",
+      "expires": 1761273692,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "uid",
+      "value": "65af465b-a8af-464d-8187-e4f1ca085771",
+      "domain": ".criteo.com",
+      "path": "/",
+      "expires": 1794883292.425456,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "IDE",
+      "value": "AHWqTUkShM-A4CJQxGW9phcPlnzpY4pz0vz5aOhWhwhv6Fp9KdXW3yfx33Bbscvc1ro",
+      "domain": ".doubleclick.net",
+      "path": "/",
+      "expires": 1795747291.504624,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "i",
+      "value": "8ef92a72-e2cf-437e-bca4-af7bef6aaa28|1761187291",
+      "domain": ".openx.net",
+      "path": "/",
+      "expires": 1792723292.79294,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "pd",
+      "value": "v2|1761187292|jEvOhIiuia",
+      "domain": ".openx.net",
+      "path": "/",
+      "expires": 1762483292.793011,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "cr",
+      "value": "1",
+      "domain": ".ladsp.com",
+      "path": "/",
+      "expires": 1761190893.586612,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "TDID",
+      "value": "71262b2b-d530-4591-85d1-d16496955b1c",
+      "domain": ".adsrvr.org",
+      "path": "/",
+      "expires": 1792723293.767783,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "uid",
+      "value": "4225453358585324305",
+      "domain": ".turn.com",
+      "path": "/",
+      "expires": 1776739293.68861,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "TDCPM",
+      "value": "CAEYBSABKAIyCwjqsfiQjfrIPhAFOAE.",
+      "domain": ".adsrvr.org",
+      "path": "/",
+      "expires": 1792723293.767866,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "smn_uid",
+      "value": "rYTkRzJRCHU_38tpBFWbXCjxBGC3Nt4",
+      "domain": ".ladsp.com",
+      "path": "/",
+      "expires": 1795747293.842881,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "lum",
+      "value": "CMfVxfegMxIFCAMQ0AU",
+      "domain": ".ladsp.com",
+      "path": "/",
+      "expires": 1795747293.842967,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://demoqa.com",
+      "localStorage": [
+        {
+          "name": "_GESPSK-pubcid.org",
+          "value": "[\"pubcid.org\",null,1761187286166,null,null,null,null,null,null,[100]]"
+        },
+        {
+          "name": "_GESPSK-crwdcntrl.net",
+          "value": "[\"crwdcntrl.net\",\"\",1761187291381,null,null,null,null,null,0]"
+        },
+        {
+          "name": "totalCallsTimeout",
+          "value": "0"
+        },
+        {
+          "name": "_GESPSK-uidapi.com",
+          "value": "[\"uidapi.com\",null,1761187286166,null,null,null,null,null,null,[100]]"
+        },
+        {
+          "name": "totalCalls",
+          "value": "0"
+        },
+        {
+          "name": "panoramaId_expiry",
+          "value": "1761273691459"
+        },
+        {
+          "name": "_GESPSK-id5-sync.com",
+          "value": "[\"id5-sync.com\",null,1761187291739,null,null,null,null,null,0,[106]]"
+        },
+        {
+          "name": "_GESPSK-esp.criteo.com",
+          "value": "[\"esp.criteo.com\",null,1761187286166,null,null,null,null,null,null,[100]]"
+        },
+        {
+          "name": "__VASTUtil__",
+          "value": "__VASTUtil__"
+        },
+        {
+          "name": "goog:cached:topics",
+          "value": "[null,1761187286239,3]"
+        },
+        {
+          "name": "_cc_id",
+          "value": "110e6ab61ea1272f0c71b2dc98e50829"
+        },
+        {
+          "name": "lastSuccessfullAd",
+          "value": "0"
+        },
+        {
+          "name": "_GESPSK-euid.eu",
+          "value": "[\"euid.eu\",null,1761187286166,null,null,null,null,null,null,[100]]"
+        },
+        {
+          "name": "_GESPSK-openx",
+          "value": "[\"openx\",\"eyJpIjoianZrcWN1TFBRMzY4cEs5NzcycXFLQT09In0=\",1761187292026,null,null,null,null,null,0]"
+        },
+        {
+          "name": "_GESPSK-33across.com",
+          "value": "[\"33across.com\",null,1761187290216,null,null,null,null,null,0,[109]]"
+        },
+        {
+          "name": "_cc_id_update_ts",
+          "value": "1761187291379"
+        },
+        {
+          "name": "_GESPSK-rtbhouse",
+          "value": "[\"rtbhouse\",null,1761187291064,null,null,null,null,null,0,[106]]"
+        }
+      ]
+    },
+    {
+      "origin": "https://758f7561bc0f2ee849cfd16abb69e9c6.safeframe.googlesyndication.com",
+      "localStorage": [
+        {
+          "name": "_mgPage1761661",
+          "value": "14"
+        },
+        {
+          "name": "mgMuidn",
+          "value": "p9myd81opVFj"
+        },
+        {
+          "name": "isSupportBlurEvent",
+          "value": "1"
+        },
+        {
+          "name": "_mgDimsData1761662",
+          "value": "[{\"requestParams\":{\"w\":728,\"h\":90,\"tl\":\"64\",\"tlp\":\"1,2\",\"sz\":\"352x153;352x90\",\"szp\":\"1;2\",\"szl\":\"1,2\"},\"precalcRect\":{\"width\":728,\"height\":90},\"preRenderTeaserSizes\":{\"0\":{\"height\":153,\"width\":352,\"position\":1,\"top\":2,\"isSingleInRow\":false},\"1\":{\"height\":90,\"width\":352,\"position\":2,\"top\":2,\"isSingleInRow\":false}},\"preRenderImageSizes\":{\"0\":{\"height\":86.59375,\"width\":129.890625},\"1\":{\"height\":86.59375,\"width\":129.890625}},\"preRenderTeaserLengths\":{\"0\":{\"length\":64,\"position\":1},\"1\":{\"length\":64,\"position\":2}},\"preRenderTeaserMatched\":true,\"lct\":1759746900,\"hashCommit\":\"a1ea3164\",\"rootWidth\":728}]"
+        },
+        {
+          "name": "_mgViewrate1761662",
+          "value": "[{\"id\":\"mh2tfvp86drd3j6f114\",\"st\":1761187291964,\"v\":0,\"r\":0}]"
+        },
+        {
+          "name": "svsds",
+          "value": "3"
+        },
+        {
+          "name": "_mgViewrate1761661",
+          "value": "[{\"id\":\"mh2tfvpeymmfotzdrls\",\"st\":1761187291970,\"v\":0,\"r\":0}]"
+        },
+        {
+          "name": "mgSnapShotExpired",
+          "value": "1761446494"
+        },
+        {
+          "name": "_mgDimsData1761670",
+          "value": "[{\"requestParams\":{\"w\":970,\"h\":250,\"tl\":\"150\",\"tlp\":\"1\",\"sz\":\"970x250\",\"szp\":\"1\",\"szl\":\"1\"},\"precalcRect\":{\"width\":970,\"height\":250},\"preRenderTeaserSizes\":{\"0\":{\"height\":250,\"width\":970,\"position\":1,\"top\":0,\"isSingleInRow\":true}},\"preRenderImageSizes\":{\"0\":{\"height\":250,\"width\":375}},\"preRenderTeaserLengths\":{\"0\":{\"length\":150,\"position\":1}},\"preRenderTeaserMatched\":true,\"lct\":1759746900,\"hashCommit\":\"a1ea3164\",\"rootWidth\":970}]"
+        },
+        {
+          "name": "_mgSessionsTimeList",
+          "value": "[1761187293970]"
+        },
+        {
+          "name": "mgSnapShot",
+          "value": "6d89ad15704535c195e97bf10e83b6bc"
+        },
+        {
+          "name": "svsdsExpired",
+          "value": "1763779292"
+        },
+        {
+          "name": "_mgSessionPagesNumber",
+          "value": "1"
+        },
+        {
+          "name": "transitionType",
+          "value": "navigation"
+        },
+        {
+          "name": "_mgPageTime1761661",
+          "value": "1761187294650"
+        },
+        {
+          "name": "_mgSessionId",
+          "value": "68f995dc-0bdb2"
+        },
+        {
+          "name": "_mgDimsData1761661",
+          "value": "[{\"requestParams\":{\"w\":300,\"h\":250,\"tl\":\"96\",\"tlp\":\"1\",\"sz\":\"300x250\",\"szp\":\"1\",\"szl\":\"1\"},\"precalcRect\":{\"width\":300,\"height\":250},\"preRenderTeaserSizes\":{\"0\":{\"height\":250,\"width\":300,\"position\":1,\"top\":0,\"isSingleInRow\":true}},\"preRenderImageSizes\":{\"0\":{\"height\":185,\"width\":300}},\"preRenderTeaserLengths\":{\"0\":{\"length\":96,\"position\":1}},\"preRenderTeaserMatched\":true,\"lct\":1759746900,\"hashCommit\":\"a1ea3164\",\"rootWidth\":300}]"
+        },
+        {
+          "name": "svspr",
+          "value": "https://demoqa.com/"
+        },
+        {
+          "name": "_mgViewrate1761670",
+          "value": "[{\"id\":\"mh2tfvp2mu70qrzmld\",\"st\":1761187291958,\"v\":0,\"r\":0}]"
+        }
+      ]
+    },
+    {
+      "origin": "https://www.google.com",
+      "localStorage": [
+        {
+          "name": "rc::h",
+          "value": "1761187293465"
+        }
+      ]
+    }
+  ]
+}

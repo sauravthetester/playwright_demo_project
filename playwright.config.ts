@@ -1,4 +1,4 @@
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig } from '@playwright/test';
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -11,6 +11,7 @@ export default defineConfig({
   testDir: path.join(__dirname, 'tests'),
   testMatch: '**/*Tests.spec.ts',
   // outputDir: path.resolve(__dirname, 'test-results'),
+  globalSetup: path.resolve(__dirname, 'utils/global-setup'),
   outputDir: path.join(__dirname, 'test-results'),
   fullyParallel: false,
   forbidOnly: !!process.env.CI,
@@ -22,7 +23,8 @@ export default defineConfig({
     trace: 'retain-on-failure',
     headless: false,
     baseURL: 'https://demoqa.com/',
-    acceptDownloads: true
+    storageState: 'utils/state.json',
+    acceptDownloads: true,
   },
 
   projects: [
@@ -30,7 +32,8 @@ export default defineConfig({
       name: 'element-tests-chrome',
       use: { 
         viewport: { width: 1080, height: 700 },
-        headless: true
+        headless: true,
+        storageState: 'utils/state.json',
      },
      testMatch: [
         'tests/elementsTests/*.spec.ts'
